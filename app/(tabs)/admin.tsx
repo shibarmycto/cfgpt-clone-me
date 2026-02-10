@@ -61,6 +61,7 @@ export default function AdminScreen() {
   const [selectedUser, setSelectedUser] = useState<AppUser | null>(null);
   const [editCredits, setEditCredits] = useState("");
   const [editTrialMessages, setEditTrialMessages] = useState("");
+  const [editVoiceCredits, setEditVoiceCredits] = useState("");
   const [adminTab, setAdminTab] = useState<AdminTab>("users");
 
   const [providers, setProviders] = useState<AiProvider[]>([]);
@@ -221,6 +222,7 @@ export default function AdminScreen() {
     setSelectedUser(u);
     setEditCredits(u.credits.toString());
     setEditTrialMessages(u.freeTrialMessages.toString());
+    setEditVoiceCredits((u.voiceCredits ?? 0).toString());
   };
 
   const handleSaveUserEdit = async () => {
@@ -230,6 +232,7 @@ export default function AdminScreen() {
       ...selectedUser,
       credits: parseInt(editCredits) || 0,
       freeTrialMessages: parseInt(editTrialMessages) || 0,
+      voiceCredits: parseInt(editVoiceCredits) || 0,
     };
     await updateUser(updated);
     setSelectedUser(null);
@@ -556,6 +559,7 @@ export default function AdminScreen() {
           </Text>
           <View style={styles.userMeta}>
             <Text style={styles.userMetaText}>Credits: {item.credits}</Text>
+            <Text style={[styles.userMetaText, { color: "#7c3aed" }]}>VC: {item.voiceCredits ?? 0}</Text>
             <Text style={styles.userMetaText}>
               Used: {item.usedMessages}/{item.freeTrialMessages}
             </Text>
@@ -1550,6 +1554,23 @@ export default function AdminScreen() {
                     keyboardType="numeric"
                     placeholderTextColor={C.placeholder}
                   />
+                </View>
+
+                <View style={styles.modalField}>
+                  <Text style={styles.modalFieldLabel}>
+                    Voice Credits (VC)
+                  </Text>
+                  <TextInput
+                    style={[styles.modalInput, { borderColor: "#7c3aed" }]}
+                    value={editVoiceCredits}
+                    onChangeText={setEditVoiceCredits}
+                    keyboardType="numeric"
+                    placeholderTextColor={C.placeholder}
+                    placeholder="0"
+                  />
+                  <Text style={{ fontSize: 10, color: C.textTertiary, marginTop: 2 }}>
+                    5 VC per number, 50 VC per agent
+                  </Text>
                 </View>
 
                 {user?.role === "super_admin" &&

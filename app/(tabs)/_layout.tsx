@@ -21,8 +21,8 @@ function NativeTabLayout() {
         <Label>AI Studio</Label>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="virtual-numbers">
-        <Icon sf={{ default: "phone", selected: "phone.fill" }} />
-        <Label>Numbers</Label>
+        <Icon sf={{ default: "paintbrush", selected: "paintbrush.fill" }} />
+        <Label>Editor</Label>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="voice">
         <Icon sf={{ default: "mic", selected: "mic.fill" }} />
@@ -118,10 +118,10 @@ function ClassicTabLayout() {
       <Tabs.Screen
         name="virtual-numbers"
         options={{
-          title: "Numbers",
+          title: "Editor",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? "call" : "call-outline"}
+              name={focused ? "brush" : "brush-outline"}
               size={20}
               color={color}
             />
