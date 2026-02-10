@@ -1,0 +1,126 @@
+TASK 1: RESTORE PAYPAL BUTTONS (Priority: CRITICAL)
+Current Issue: PayPal buttons removed, users cannot purchase credits at www.cfgpt.org
+Required Actions:
+
+Restore original PayPal button code for:
+
+£10 monthly credit bundle
+£20 monthly credit bundle
+
+
+Verify buttons appear on public site (www.cfgpt.org)
+Test credit purchase flow works correctly
+DO NOT change any other payment functionality
+
+
+TASK 2: ADD NEW £5 VOICE CLONING FEATURE
+2A: Create New PayPal Button
+
+Add ONE new PayPal button: "£5 - Voice Cloning (5 Credits)"
+Must deduct 5 credits from user balance
+If insufficient credits, show message: "You need at least 5 credits. Purchase a £10 or £20 monthly pack to use this feature."
+Block free trial accounts - require paid subscription
+
+2B: Implement Voice Cloning Feature
+API Documentation: https://elevenlabs.io/docs/eleven-api/guides/cookbooks/voices/instant-voice-cloning
+Requirements:
+
+Create button: "Clone My Voice (5 credits)"
+Button click triggers:
+
+Check user has 5+ credits
+Check user is NOT on free trial
+Deduct 5 credits from balance
+Call ElevenLabs API with YOUR API KEY
+
+
+Allow voice upload/recording per API docs
+Store cloned voice ID to user account
+Display success message with voice details
+
+
+TASK 3: IMPLEMENT AGENT WIDGET FEATURE
+3A: Create Widget Generator
+API Documentation: https://elevenlabs.io/docs/eleven-agents/quickstart
+Requirements:
+
+Add button in user account: "Create AI Agent Widget"
+User can create unlimited widgets
+Each widget creation uses cloned voice from Task 2
+Store all widgets in user's account dashboard
+User can select/switch between widgets
+
+3B: Widget Usage & Billing System
+Call Cost Structure:
+
+Initial call connection: 10 credits (deducted when call starts)
+Additional time: 1 credit per 10 minutes
+Maximum call duration: 60 minutes
+
+Timer & Credit Logic:
+ON CALL START:
+- Check user has 10+ credits
+- Deduct 10 credits immediately
+- Start visible 60-minute countdown timer on screen
+
+DURING CALL (every 10 minutes):
+- Deduct 1 credit
+- Update timer display
+
+ON CALL END:
+- Calculate actual call duration
+- If call < 60 mins, refund unused credits
+- Example: 50-min call = 9 credits total (10 initial - 1 refund)
+- Display credit summary to user
+3C: Widget Display
+
+Embed widget in user account dashboard
+Widget must be publicly accessible when shared
+Users can test widget from their account
+Widget uses selected cloned voice
+
+
+DEPLOYMENT REQUIREMENTS
+Before ANY deployment:
+
+Test all features locally
+Verify www.cfgpt.org shows changes
+Confirm PayPal buttons functional
+Test credit deduction/refund logic
+Push changes to GitHub
+WAIT for my approval to publish
+
+Files to modify (estimate scope FIRST):
+
+Payment integration files (PayPal buttons)
+User account/dashboard pages
+Credit balance management system
+ElevenLabs API integration (new)
+Widget embedding system (new)
+
+
+WHAT NOT TO DO (COST CONTROL)
+❌ Do NOT refactor existing code unnecessarily
+❌ Do NOT redesign UI/UX unless explicitly broken
+❌ Do NOT add features not listed above
+❌ Do NOT make database schema changes without asking
+❌ Do NOT install new major dependencies without approval
+❌ Do NOT delete or modify unrelated functionality
+
+ERROR HANDLING REQUIREMENTS
+
+All API calls must have error handling
+Display user-friendly error messages
+Log errors for debugging (don't expose to users)
+Credit deductions must be atomic (all-or-nothing)
+
+
+CONFIRMATION REQUIRED
+Before starting, respond with:
+
+Estimated cost for ALL changes
+List of files you'll modify
+Breakdown by task (which costs most)
+Confirm you'll STOP if cost exceeds $10
+
+Only proceed after I approve your estimate.

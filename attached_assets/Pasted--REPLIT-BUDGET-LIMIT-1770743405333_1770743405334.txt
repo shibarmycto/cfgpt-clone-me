@@ -1,0 +1,209 @@
+================================================================================
+REPLIT BUDGET-LIMITED DEVELOPMENT PROMPT
+================================================================================
+
+**CRITICAL: $2 MAXIMUM BUDGET - STOP IMMEDIATELY IF EXCEEDED**
+
+================================================================================
+BUDGET CONTROLS (MUST IMPLEMENT FIRST)
+================================================================================
+
+HARD STOP at $1.80 usage
+Alert me at $1.00 usage  
+Do NOT proceed beyond $2.00 total cost
+If limit reached: STOP and report progress
+
+================================================================================
+TASK SUMMARY: Voice Assistant System Overhaul
+================================================================================
+
+Target Domain: cfgpt.org (update ALL instances: expo, online, dust files, backend)
+
+================================================================================
+STEP-BY-STEP IMPLEMENTATION
+================================================================================
+
+--------------------------------------------------------------------------------
+PHASE 1: Cleanup (Estimate: $0.30)
+--------------------------------------------------------------------------------
+- [ ] Remove existing phone/voice clone solutions
+- [ ] Delete "el" channel
+- [ ] Delete "res" channel  
+- [ ] Delete web phone solution tab
+- [ ] Create new tab: "Voice Assistant"
+
+--------------------------------------------------------------------------------
+PHASE 2: Credits System (Estimate: $0.50)
+--------------------------------------------------------------------------------
+
+CREATE TWO SEPARATE CREDIT TYPES:
+
+1. VOICE CREDITS (new, separate system)
+   - Cannot be used from free trial
+   - Only purchasable via PayPal
+   - Required for: buying numbers (5 credits) + creating agents (50 credits)
+
+2. NORMAL CREDITS (existing)
+   - Keep existing functionality
+   - Keep separated from Voice Credits
+
+ADMIN PANEL ADDITION:
+- Add "Send Voice Credits" function (admin only)
+- Manual credit allocation after PayPal payment verification
+
+--------------------------------------------------------------------------------
+PHASE 3: PayPal Integration (Estimate: $0.40)
+--------------------------------------------------------------------------------
+
+ADD PAYPAL BUTTON:
+
+<script src="https://www.paypal.com/sdk/js?client-id=BAANnlPxOgpjytPGHYmp88YUoRE72QUy7-SG3nr4j3vb8cKWGTnT_prqNNvfFH2_s3dg0yjBkc4cuc1teg&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
+
+<div id="paypal-container-H3E7A5NBU3L92"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "H3E7A5NBU3L92",
+  }).render("#paypal-container-H3E7A5NBU3L92")
+</script>
+
+LOCATION: Voice Credits purchase page
+
+PAYMENT FLOW:
+1. User clicks PayPal button
+2. Payment completes
+3. Admin manually adds Voice Credits to user account
+4. User can now use Voice Assistant features
+
+--------------------------------------------------------------------------------
+PHASE 4: Telnyx Number Purchase (Estimate: $0.40)
+--------------------------------------------------------------------------------
+
+REQUIREMENTS:
+- Display available numbers from Telnyx API
+- Cost: 5 Voice Credits per number
+- Restriction: Only users with previous PayPal payment history
+
+USER FLOW:
+
+IF user has_paid_via_paypal == TRUE:
+  â Show Telnyx available numbers
+  IF voice_credits >= 5:
+    â Allow purchase
+  ELSE:
+    â Redirect to PayPal Voice Credits button
+ELSE:
+  â "Payment required. Please purchase Voice Credits first."
+
+--------------------------------------------------------------------------------
+PHASE 5: Voice Upload & Agent Creation (Estimate: $0.40)
+--------------------------------------------------------------------------------
+
+NEW "VOICE ASSISTANT" TAB CONTAINS:
+
+1. VOICE UPLOAD SECTION (single upload channel only)
+   - One voice file upload field
+   - Text field: "How should your assistant behave?" (prompt input)
+   
+2. "CREATE YOUR AGENT" BUTTON
+   - Cost: 50 Voice Credits
+   - Action: Sends voice file + prompt to admin dashboard
+   
+BUTTON LOGIC:
+
+IF voice_credits >= 50:
+  â Submit voice + prompt to admin
+  â Deduct 50 credits
+  â Show "Request submitted!"
+ELSE:
+  â Show "Insufficient Voice Credits"
+  â Redirect to PayPal button
+
+--------------------------------------------------------------------------------
+PHASE 6: Admin Dashboard (Estimate: $0.00 - use existing)
+--------------------------------------------------------------------------------
+
+NEW ADMIN TAB: "Voice Clone Requests"
+
+DISPLAYS:
+- User name
+- Voice file (playable)
+- Assistant behavior prompt
+- Assigned phone number
+- Timestamp
+- Status (Pending/In Progress/Complete)
+
+ADMIN ACTIONS:
+- Download voice file
+- View full prompt
+- Mark as complete
+- Send Voice Credits to user
+
+================================================================================
+SECURITY REQUIREMENTS
+================================================================================
+
+1. Voice Credits completely separated from regular credits database
+2. Only users with paypal_payment_history = true can access features
+3. Admin-only access to Voice Clone Requests dashboard
+4. All file uploads sanitized and validated
+
+================================================================================
+FILES TO UPDATE
+================================================================================
+
+/cfgpt.org/
+  âââ index.html (update all domains)
+  âââ backend/credits.js (add voice_credits system)
+  âââ backend/telnyx-api.js (number fetching)
+  âââ components/voice-assistant-tab.js (NEW)
+  âââ admin/voice-requests-dashboard.js (NEW)
+  âââ dust-files/ (update configs)
+  âââ database/schema.sql (add voice_credits table)
+
+================================================================================
+CRITICAL REMINDERS
+================================================================================
+
+STOP WORK IF:
+- Budget reaches $1.80
+- Any step takes longer than estimated
+- Errors require significant debugging time
+
+REPORT BEFORE CONTINUING IF:
+- You hit $1.00 spent
+- Any phase seems more complex than estimated
+
+DO NOT:
+- Add extra features
+- Refactor existing code beyond requirements
+- Optimize unless breaking
+
+================================================================================
+DEFINITION OF DONE
+================================================================================
+
+- [ ] Old phone/voice solutions removed
+- [ ] Voice Credits system separate and functional
+- [ ] PayPal button integrated and visible
+- [ ] Telnyx numbers display for paid users only
+- [ ] Voice upload + prompt submission works
+- [ ] 50 credit deduction on agent creation
+- [ ] Admin dashboard shows voice clone requests
+- [ ] All changes live on cfgpt.org
+- [ ] Budget under $2.00
+
+================================================================================
+EXECUTION INSTRUCTIONS
+================================================================================
+
+START WITH PHASE 1 AND REPORT COST AFTER EACH PHASE
+
+If at any point the budget is approaching $2.00, STOP immediately and provide:
+1. What was completed
+2. What remains
+3. Actual cost breakdown
+4. Next steps if additional budget approved
+
+================================================================================
+END OF PROMPT
+================================================================================

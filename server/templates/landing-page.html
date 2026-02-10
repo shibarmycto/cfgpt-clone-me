@@ -1,0 +1,1982 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CFGPT — The Ultra AI Building Intelligence Into Everyday Life</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="CFGPT is the new Ultra AI company building powerful AI tools into everyday life. Clone Me virtual receptionist, AI mascot chatbots for businesses, multi-provider AI chat, image and video generation." />
+    <meta name="theme-color" content="#0A0E1A" />
+    <meta property="og:title" content="CFGPT — The Ultra AI Building Intelligence Into Everyday Life" />
+    <meta property="og:description" content="Meet our AI Mascots — CF Urban, CF Trader & CF Eliza. Chat with intelligent AI assistants, clone your voice, generate images and add interactive AI chatbots to any website." />
+    <meta property="og:image" content="BASE_URL_PLACEHOLDER/attached_assets/IMG_6594_1770421143181.jpeg" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CFGPT — The Ultra AI" />
+    <meta name="twitter:description" content="Meet our AI Mascots — CF Urban, CF Trader & CF Eliza. AI tools built for everyday life." />
+    <meta name="twitter:image" content="BASE_URL_PLACEHOLDER/attached_assets/IMG_6594_1770421143181.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4631519337168518" crossorigin="anonymous"></script>
+    <script src="https://acscdn.com/script/atl.js" type="text/javascript"></script>
+    <style>
+      :root {
+        --bg: #0A0E1A;
+        --bg2: #111827;
+        --card: #1E293B;
+        --card-elevated: #243044;
+        --tint: #00D4AA;
+        --accent: #3B82F6;
+        --purple: #8B5CF6;
+        --pink: #FF6B9D;
+        --gold: #FFD700;
+        --text: #FFFFFF;
+        --text2: #94A3B8;
+        --text3: #64748B;
+        --border: #1E293B;
+        --border-light: #334155;
+        --danger: #EF4444;
+        --warning: #F59E0B;
+        --success: #10B981;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      a { text-decoration: none; color: inherit; }
+
+      /* ─── NAV ─── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        background: rgba(10, 14, 26, 0.85);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 900;
+        font-size: 22px;
+        letter-spacing: -0.5px;
+      }
+
+      .nav-logo-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, var(--tint), var(--accent));
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 900;
+        color: #fff;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .nav-links a {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text2);
+        transition: color 0.2s;
+      }
+      .nav-links a:hover { color: var(--text); }
+
+      .nav-cta {
+        background: linear-gradient(135deg, var(--tint), #00B894) !important;
+        color: var(--bg) !important;
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-weight: 700 !important;
+        font-size: 15px !important;
+        transition: opacity 0.2s, transform 0.2s !important;
+        box-shadow: 0 4px 20px rgba(0, 212, 170, 0.3);
+      }
+      .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text);
+        font-size: 24px;
+        cursor: pointer;
+        padding: 4px;
+      }
+
+      /* ─── HERO ─── */
+      .hero {
+        padding: 160px 24px 80px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: -300px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1000px;
+        height: 1000px;
+        background: radial-gradient(circle, rgba(0, 212, 170, 0.1) 0%, rgba(59, 130, 246, 0.05) 40%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, rgba(0, 212, 170, 0.15), rgba(59, 130, 246, 0.15));
+        border: 1px solid rgba(0, 212, 170, 0.3);
+        padding: 10px 22px;
+        border-radius: 100px;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--tint);
+        margin-bottom: 32px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .hero-badge-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--tint);
+        border-radius: 50%;
+        animation: pulse-dot 2s infinite;
+      }
+
+      @keyframes pulse-dot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(0.8); }
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 7vw, 80px);
+        font-weight: 900;
+        line-height: 1.05;
+        letter-spacing: -3px;
+        margin-bottom: 28px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero h1 .gradient-text {
+        background: linear-gradient(135deg, var(--tint) 0%, var(--accent) 50%, var(--purple) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-sub {
+        font-size: clamp(17px, 2.2vw, 22px);
+        color: var(--text2);
+        max-width: 680px;
+        margin: 0 auto 48px;
+        line-height: 1.7;
+      }
+
+      .hero-actions {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+      }
+
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 18px 40px;
+        background: linear-gradient(135deg, var(--tint), #00B894);
+        color: var(--bg);
+        font-weight: 800;
+        font-size: 18px;
+        border-radius: 16px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 6px 30px rgba(0, 212, 170, 0.35);
+        letter-spacing: -0.3px;
+      }
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 40px rgba(0, 212, 170, 0.45);
+      }
+
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 18px 40px;
+        background: var(--card);
+        color: var(--text);
+        font-weight: 700;
+        font-size: 18px;
+        border-radius: 16px;
+        border: 2px solid var(--border-light);
+        cursor: pointer;
+        transition: background 0.2s, border-color 0.2s, transform 0.2s;
+      }
+      .btn-secondary:hover {
+        background: var(--card-elevated);
+        border-color: var(--tint);
+        transform: translateY(-2px);
+      }
+
+      .btn-gold {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 18px 40px;
+        background: linear-gradient(135deg, #FFD700, #FFA500);
+        color: #1a1a2e;
+        font-weight: 800;
+        font-size: 18px;
+        border-radius: 16px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 6px 30px rgba(255, 215, 0, 0.3);
+        letter-spacing: -0.3px;
+      }
+      .btn-gold:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 40px rgba(255, 215, 0, 0.4);
+      }
+
+      .hero-powered {
+        font-size: 13px;
+        color: var(--text3);
+        margin-bottom: 48px;
+      }
+      .hero-powered strong { color: var(--text2); }
+
+      /* ─── QUICK LINKS ─── */
+      .quick-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 24px 20px;
+      }
+
+      .quick-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 28px 24px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        flex: 1;
+        min-width: 180px;
+        max-width: 240px;
+        transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        text-align: center;
+      }
+      .quick-link:hover {
+        transform: translateY(-6px);
+        border-color: var(--tint);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .quick-link-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+      }
+
+      .quick-link h3 {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .quick-link p {
+        font-size: 12px;
+        color: var(--text3);
+        line-height: 1.5;
+      }
+
+      /* ─── STATS BAR ─── */
+      .stats-bar {
+        display: flex;
+        justify-content: center;
+        gap: 48px;
+        padding: 48px 24px;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        background: var(--bg2);
+        flex-wrap: wrap;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 36px;
+        font-weight: 900;
+        letter-spacing: -1px;
+      }
+
+      .stat-label {
+        font-size: 13px;
+        color: var(--text3);
+        margin-top: 4px;
+        font-weight: 500;
+      }
+
+      /* ─── SECTIONS ─── */
+      .section {
+        padding: 100px 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+
+      .section-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--tint);
+        margin-bottom: 16px;
+      }
+
+      .section-title {
+        font-size: clamp(28px, 4vw, 48px);
+        font-weight: 900;
+        letter-spacing: -1.5px;
+        margin-bottom: 16px;
+      }
+
+      .section-desc {
+        font-size: 18px;
+        color: var(--text2);
+        max-width: 640px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      /* ─── MASCOT SHOWCASE ─── */
+      .mascot-section {
+        background: var(--bg2);
+        padding: 100px 24px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .mascot-section::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        right: -200px;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(0, 212, 170, 0.06) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .mascot-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+      }
+
+      .mascot-content h2 {
+        font-size: clamp(28px, 4vw, 44px);
+        font-weight: 900;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+      }
+
+      .mascot-content .gradient-text {
+        background: linear-gradient(135deg, var(--tint) 0%, var(--accent) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .mascot-content > p {
+        font-size: 17px;
+        color: var(--text2);
+        line-height: 1.7;
+        margin-bottom: 32px;
+      }
+
+      .mascot-features {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 36px;
+      }
+
+      .mascot-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 15px;
+        color: var(--text2);
+        line-height: 1.6;
+      }
+
+      .mascot-features li .mf-icon {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        margin-top: 2px;
+      }
+
+      .mascot-demo {
+        background: var(--card);
+        border: 1px solid var(--border-light);
+        border-radius: 24px;
+        padding: 32px;
+        position: relative;
+      }
+
+      .mascot-demo-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .mascot-demo-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 2px solid var(--tint);
+        object-fit: cover;
+      }
+
+      .mascot-demo-info h4 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--tint);
+      }
+
+      .mascot-demo-info small {
+        font-size: 12px;
+        color: var(--text3);
+      }
+
+      .mascot-demo-badge {
+        margin-left: auto;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--success);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .mascot-demo-badge span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--success);
+        animation: pulse-dot 2s infinite;
+      }
+
+      .mascot-demo-msgs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .mascot-demo-msg {
+        padding: 10px 14px;
+        border-radius: 16px;
+        font-size: 13px;
+        line-height: 1.5;
+        max-width: 85%;
+      }
+
+      .mascot-demo-msg.bot {
+        background: var(--card-elevated);
+        color: var(--text);
+        border-bottom-left-radius: 4px;
+        align-self: flex-start;
+      }
+
+      .mascot-demo-msg.user {
+        background: var(--tint);
+        color: var(--bg);
+        border-bottom-right-radius: 4px;
+        align-self: flex-end;
+      }
+
+      .mascot-demo-cta {
+        text-align: center;
+        font-size: 12px;
+        color: var(--text3);
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+      }
+
+      .mascot-demo-cta strong {
+        color: var(--tint);
+        cursor: pointer;
+      }
+
+      .mascot-personalities {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .mascot-p-pill {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14px;
+        border-radius: 100px;
+        border: 1px solid var(--border);
+        background: var(--card);
+        font-size: 12px;
+        font-weight: 600;
+        transition: border-color 0.2s;
+      }
+
+      .mascot-p-pill:hover { border-color: var(--tint); }
+
+      .mascot-p-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+
+      /* ─── FEATURES GRID ─── */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+      }
+
+      .feature-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 32px;
+        transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      }
+      .feature-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--border-light);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .feature-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .feature-card h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .feature-card p {
+        font-size: 14px;
+        color: var(--text2);
+        line-height: 1.7;
+      }
+
+      .feature-card .beta-tag {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--purple), var(--pink));
+        color: #fff;
+        padding: 3px 10px;
+        border-radius: 100px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+
+      /* ─── CLONE ME BANNER ─── */
+      .clone-banner {
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(255, 107, 157, 0.1));
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 24px;
+        padding: 48px;
+        max-width: 1000px;
+        margin: -20px auto 60px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .clone-banner::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent 70%);
+        pointer-events: none;
+      }
+
+      .clone-banner-content {
+        flex: 1;
+      }
+
+      .clone-banner-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--purple), var(--pink));
+        color: #fff;
+        padding: 6px 16px;
+        border-radius: 100px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+      }
+
+      .clone-banner h3 {
+        font-size: clamp(22px, 3vw, 32px);
+        font-weight: 800;
+        margin-bottom: 12px;
+        letter-spacing: -0.5px;
+      }
+
+      .clone-banner p {
+        font-size: 15px;
+        color: var(--text2);
+        line-height: 1.7;
+        margin-bottom: 24px;
+        max-width: 500px;
+      }
+
+      .clone-banner-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn-purple {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        background: linear-gradient(135deg, var(--purple), var(--pink));
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        border-radius: 14px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+      }
+      .btn-purple:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4);
+      }
+
+      .clone-banner-icon {
+        width: 120px;
+        height: 120px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(255, 107, 157, 0.2));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        flex-shrink: 0;
+      }
+
+      /* ─── PRICING ─── */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .pricing-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 40px 28px;
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s, border-color 0.3s;
+      }
+      .pricing-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--border-light);
+      }
+
+      .pricing-card.featured {
+        border-color: var(--tint);
+        box-shadow: 0 0 50px rgba(0, 212, 170, 0.15);
+        transform: scale(1.04);
+      }
+      .pricing-card.featured:hover {
+        transform: scale(1.04) translateY(-4px);
+      }
+
+      .pricing-badge {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, var(--tint), var(--accent));
+        color: var(--bg);
+        font-size: 12px;
+        font-weight: 700;
+        padding: 6px 18px;
+        border-radius: 100px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+
+      .pricing-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 8px;
+      }
+
+      .pricing-price {
+        font-size: 52px;
+        font-weight: 900;
+        letter-spacing: -2px;
+        margin-bottom: 4px;
+        line-height: 1;
+      }
+
+      .pricing-period {
+        font-size: 14px;
+        color: var(--text3);
+        margin-bottom: 28px;
+      }
+
+      .pricing-credits {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--tint);
+        margin-bottom: 8px;
+      }
+
+      .pricing-daily {
+        font-size: 13px;
+        color: var(--text3);
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .pricing-features {
+        list-style: none;
+        text-align: left;
+        margin-bottom: 32px;
+      }
+
+      .pricing-features li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 7px 0;
+        font-size: 14px;
+        color: var(--text2);
+      }
+
+      .pricing-features li .check {
+        color: var(--tint);
+        font-weight: 700;
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+
+      .pricing-btn {
+        display: block;
+        width: 100%;
+        padding: 16px;
+        border-radius: 14px;
+        font-weight: 700;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: opacity 0.2s, transform 0.2s;
+      }
+      .pricing-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+      .pricing-btn-primary {
+        background: linear-gradient(135deg, var(--tint), #00B894);
+        color: var(--bg);
+        box-shadow: 0 4px 20px rgba(0, 212, 170, 0.25);
+      }
+
+      .pricing-btn-secondary {
+        background: var(--card-elevated);
+        color: var(--text);
+        border: 1px solid var(--border-light);
+      }
+
+      .pricing-btn-gold {
+        background: linear-gradient(135deg, #FFD700, #FFA500);
+        color: #1a1a2e;
+        box-shadow: 0 4px 20px rgba(255, 215, 0, 0.25);
+      }
+
+      /* ─── CTA ─── */
+      .cta-section {
+        padding: 100px 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: '';
+        position: absolute;
+        bottom: -200px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1000px;
+        height: 600px;
+        background: radial-gradient(ellipse, rgba(0, 212, 170, 0.06) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .cta-inner {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .cta-title {
+        font-size: clamp(28px, 4vw, 48px);
+        font-weight: 900;
+        letter-spacing: -1.5px;
+        margin-bottom: 16px;
+      }
+
+      .cta-desc {
+        font-size: 18px;
+        color: var(--text2);
+        margin-bottom: 40px;
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.7;
+      }
+
+      .app-download-row {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+
+      .app-download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 28px;
+        background: var(--card);
+        border: 1px solid var(--border-light);
+        border-radius: 14px;
+        transition: background 0.2s, border-color 0.2s;
+      }
+      .app-download-btn:hover {
+        background: var(--card-elevated);
+        border-color: var(--text3);
+      }
+
+      .app-download-btn svg {
+        width: 24px;
+        height: 24px;
+        fill: var(--text);
+      }
+
+      .app-download-info {
+        text-align: left;
+      }
+
+      .app-download-small {
+        font-size: 11px;
+        color: var(--text3);
+        font-weight: 500;
+      }
+
+      .app-download-name {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .qr-area {
+        display: inline-block;
+        background: #fff;
+        border-radius: 16px;
+        padding: 16px;
+        margin-top: 20px;
+      }
+
+      .qr-area canvas {
+        width: 160px !important;
+        height: 160px !important;
+      }
+
+      .qr-label {
+        font-size: 13px;
+        color: var(--text3);
+        margin-top: 12px;
+      }
+
+      /* ─── FOOTER ─── */
+      footer {
+        background: var(--bg2);
+        border-top: 1px solid var(--border);
+        padding: 60px 24px 32px;
+      }
+
+      .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 48px;
+      }
+
+      .footer-brand p {
+        font-size: 14px;
+        color: var(--text3);
+        margin-top: 12px;
+        line-height: 1.7;
+        max-width: 280px;
+      }
+
+      .footer-col h4 {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--text2);
+        margin-bottom: 16px;
+      }
+
+      .footer-col a {
+        display: block;
+        font-size: 14px;
+        color: var(--text3);
+        padding: 4px 0;
+        transition: color 0.2s;
+      }
+      .footer-col a:hover { color: var(--text); }
+
+      .footer-bottom {
+        max-width: 1200px;
+        margin: 40px auto 0;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        color: var(--text3);
+      }
+
+      /* ─── MOBILE ─── */
+      @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .nav-links.open {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 72px;
+          left: 0;
+          right: 0;
+          background: rgba(10, 14, 26, 0.98);
+          padding: 24px;
+          gap: 16px;
+          border-bottom: 1px solid var(--border);
+        }
+        .nav-toggle { display: block; }
+
+        .hero { padding: 120px 20px 60px; }
+        .stats-bar { gap: 24px; }
+        .stat-value { font-size: 28px; }
+
+        .quick-links { gap: 12px; }
+        .quick-link { min-width: 140px; padding: 20px 16px; }
+
+        .features-grid { grid-template-columns: 1fr; }
+        .pricing-grid { grid-template-columns: 1fr; }
+
+        .mascot-inner { grid-template-columns: 1fr; }
+        .mascot-demo { order: -1; }
+        .mascot-cards-grid { grid-template-columns: 1fr !important; max-width: 360px; margin-left: auto !important; margin-right: auto !important; }
+
+        .clone-banner { flex-direction: column; text-align: center; padding: 32px 24px; }
+        .clone-banner-actions { justify-content: center; }
+        .clone-banner p { max-width: 100%; }
+
+        .footer-inner {
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          gap: 8px;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-actions { flex-direction: column; align-items: center; }
+        .footer-inner { grid-template-columns: 1fr; }
+        .mascot-personalities { flex-direction: column; align-items: center; }
+        .btn-primary, .btn-secondary, .btn-gold { width: 100%; justify-content: center; }
+      }
+
+      /* ─── ANIMATIONS ─── */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">
+          <div class="nav-logo-icon">CF</div>
+          CFGPT
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="#ai-tools">AI Tools</a>
+          <a href="#mascot">AI Mascot</a>
+          <a href="#clone-me">Clone Me</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#download">Download</a>
+          <a href="/app" class="nav-cta">Launch App</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menu">&#9776;</button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-badge fade-up">
+        <span class="hero-badge-dot"></span>
+        The New Ultra AI
+      </div>
+      <h1 class="fade-up">
+        <span class="gradient-text">CFGPT</span><br />
+        AI for Everyday Life
+      </h1>
+      <p class="hero-sub fade-up">
+        We're building powerful AI tools that work for you 24/7.
+        Chat with intelligent AI assistants, clone your voice, generate images and videos,
+        and add interactive AI chatbots to any website.
+      </p>
+      <div class="hero-actions fade-up">
+        <a href="/app" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></svg>
+          Launch CFGPT Free
+        </a>
+        <a href="#pricing" class="btn-gold">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          See Pricing
+        </a>
+      </div>
+      <p class="hero-powered fade-up">Powered by <strong>Claude AI</strong> + <strong>OpenAI</strong> + <strong>CFGPT Engine</strong> &mdash; multi-provider intelligence</p>
+    </section>
+
+    <!-- QUICK LINKS -->
+    <div class="quick-links fade-up">
+      <a href="#mascot" class="quick-link">
+        <div class="quick-link-icon" style="background: rgba(0, 212, 170, 0.15);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--tint)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <h3>AI Mascot</h3>
+        <p>Chat with CF right now</p>
+      </a>
+      <a href="/app" class="quick-link">
+        <div class="quick-link-icon" style="background: rgba(59, 130, 246, 0.15);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+        </div>
+        <h3>Open App</h3>
+        <p>Launch the full platform</p>
+      </a>
+      <a href="#clone-me" class="quick-link">
+        <div class="quick-link-icon" style="background: rgba(139, 92, 246, 0.15);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        </div>
+        <h3>Clone Me</h3>
+        <p>Virtual receptionist beta</p>
+      </a>
+      <a href="#pricing" class="quick-link">
+        <div class="quick-link-icon" style="background: rgba(255, 215, 0, 0.15);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Pricing</h3>
+        <p>From just &pound;10</p>
+      </a>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-bar fade-up">
+      <div class="stat-item">
+        <div class="stat-value" style="color: var(--tint);">3</div>
+        <div class="stat-label">AI Providers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" style="color: var(--accent);">24/7</div>
+        <div class="stat-label">Always On</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" style="color: var(--purple);">3</div>
+        <div class="stat-label">AI Personalities</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" style="color: var(--gold);">5</div>
+        <div class="stat-label">Free Messages</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" style="color: var(--pink);">&lt;1s</div>
+        <div class="stat-label">Response Time</div>
+      </div>
+    </div>
+
+    <!-- AI MASCOT SHOWCASE -->
+    <section class="mascot-section" id="mascot">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <div class="section-header fade-up">
+          <div class="section-tag">&#9889; Meet Your AI Companions</div>
+          <h2 class="section-title" style="margin-bottom: 8px;">The <span style="background: linear-gradient(135deg, var(--tint), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">CF Mascots</span> Are Here to Chill With You</h2>
+          <p class="section-desc">
+            While you use CFGPT, our AI mascots hang out with you. Ask them anything &mdash; crypto, football, markets, gossip, life advice.
+            Switch between personalities whenever you want. They're always in the corner, ready to chat.
+          </p>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 48px;" class="fade-up">
+          <img src="/attached_assets/IMG_6594_1770421143181.jpeg" alt="Meet Our Mascots - CF Urban, CF Trader, CF Eliza" style="max-width: 600px; width: 100%; border-radius: 24px; box-shadow: 0 12px 60px rgba(0,0,0,0.5); border: 2px solid var(--border-light);" />
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px;" class="fade-up mascot-cards-grid">
+          <div style="background: var(--card); border: 2px solid rgba(0, 230, 118, 0.3); border-radius: 20px; padding: 28px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;" onclick="selectPersonality('urban'); cfToggle();" onmouseenter="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 40px rgba(0,230,118,0.2)'" onmouseleave="this.style.transform=''; this.style.boxShadow=''">
+            <img src="/attached_assets/cf_urban.png" alt="CF Urban" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid #00E676; margin-bottom: 16px; object-fit: cover;" />
+            <h3 style="font-size: 20px; font-weight: 800; color: #00E676; margin-bottom: 6px;">CF Urban</h3>
+            <p style="font-size: 13px; color: var(--tint); font-weight: 600; margin-bottom: 10px;">Your Crypto Companion</p>
+            <p style="font-size: 13px; color: var(--text2); line-height: 1.6;">Streetwise banter, crypto chat, football vibes, and real talk. The homie who keeps it 100.</p>
+            <div style="margin-top: 16px; padding: 10px 20px; background: rgba(0, 230, 118, 0.12); border-radius: 12px; font-size: 13px; color: #00E676; font-weight: 600;">Chat with Urban</div>
+          </div>
+
+          <div style="background: var(--card); border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 20px; padding: 28px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;" onclick="selectPersonality('trader'); cfToggle();" onmouseenter="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 40px rgba(255,215,0,0.2)'" onmouseleave="this.style.transform=''; this.style.boxShadow=''">
+            <img src="/attached_assets/cf_trader.png" alt="CF Trader" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid #FFD700; margin-bottom: 16px; object-fit: cover;" />
+            <h3 style="font-size: 20px; font-weight: 800; color: #FFD700; margin-bottom: 6px;">CF Trader</h3>
+            <p style="font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 10px;">Your Elite Market Analyst</p>
+            <p style="font-size: 13px; color: var(--text2); line-height: 1.6;">Posh London trader energy, witty comedy, luxury vibes. Markets, money, and the finer things.</p>
+            <div style="margin-top: 16px; padding: 10px 20px; background: rgba(255, 215, 0, 0.12); border-radius: 12px; font-size: 13px; color: #FFD700; font-weight: 600;">Chat with Trader</div>
+          </div>
+
+          <div style="background: var(--card); border: 2px solid rgba(255, 105, 180, 0.3); border-radius: 20px; padding: 28px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;" onclick="selectPersonality('eliza'); cfToggle();" onmouseenter="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 40px rgba(255,105,180,0.2)'" onmouseleave="this.style.transform=''; this.style.boxShadow=''">
+            <img src="/attached_assets/cf_eliza.png" alt="CF Eliza" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid #FF69B4; margin-bottom: 16px; object-fit: cover;" />
+            <h3 style="font-size: 20px; font-weight: 800; color: #FF69B4; margin-bottom: 6px;">CF Eliza</h3>
+            <p style="font-size: 13px; color: var(--pink); font-weight: 600; margin-bottom: 10px;">Your Spiritual Bestie</p>
+            <p style="font-size: 13px; color: var(--text2); line-height: 1.6;">Positivity, affirmations, spiritual vibes, soap gossip, and girl talk. She's your cheerleader.</p>
+            <div style="margin-top: 16px; padding: 10px 20px; background: rgba(255, 105, 180, 0.12); border-radius: 12px; font-size: 13px; color: #FF69B4; font-weight: 600;">Chat with Eliza</div>
+          </div>
+        </div>
+
+        <div class="mascot-inner fade-up">
+          <div class="mascot-content">
+            <h2 style="font-size: clamp(24px, 3vw, 36px);">Add an <span class="gradient-text">AI Mascot</span> to<br />Your Business Website</h2>
+            <p>
+              Our AI mascot isn't just for CFGPT &mdash; you can embed it on your own business website.
+              Give your visitors a friendly AI chatbot that answers questions, engages customers, and represents your brand 24/7.
+            </p>
+            <ul class="mascot-features">
+              <li>
+                <div class="mf-icon" style="background: rgba(0, 230, 118, 0.15);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00E676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <div><strong style="color: var(--text);">Embed on any website</strong> &mdash; One line of code and your site has a live AI chatbot ready to talk to visitors</div>
+              </li>
+              <li>
+                <div class="mf-icon" style="background: rgba(255, 215, 0, 0.15);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                </div>
+                <div><strong style="color: var(--text);">Your branding, your personality</strong> &mdash; Custom logo, colours, tone of voice. Make it feel like part of your brand</div>
+              </li>
+              <li>
+                <div class="mf-icon" style="background: rgba(59, 130, 246, 0.15);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <div><strong style="color: var(--text);">Powered by top AI</strong> &mdash; Claude, OpenAI, and our own engine. Your customers get smart, helpful responses every time</div>
+              </li>
+            </ul>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="#pricing" class="btn-primary" style="padding: 14px 28px; font-size: 15px;">Get AI Mascot for Your Site</a>
+            </div>
+          </div>
+          <div class="mascot-demo">
+            <div class="mascot-demo-header">
+              <img src="/attached_assets/cf_urban.png" alt="CF Urban" class="mascot-demo-avatar" />
+              <div class="mascot-demo-info">
+                <h4>CF Urban</h4>
+                <small>your crypto companion</small>
+              </div>
+              <div class="mascot-demo-badge">
+                <span></span> Online
+              </div>
+            </div>
+            <div class="mascot-demo-msgs">
+              <div class="mascot-demo-msg bot">yo what's good fam, i'm CF Urban from CFGPT. ask me anything - crypto, football, whatever's on your mind</div>
+              <div class="mascot-demo-msg user">What's the vibe on Bitcoin today?</div>
+              <div class="mascot-demo-msg bot">Bitcoin's holding strong bruv. the market sentiment is looking bullish ngl. long-term holders are stacking sats heavy right now</div>
+              <div class="mascot-demo-msg user">Nice. What else can you do?</div>
+              <div class="mascot-demo-msg bot">bare tings fam. i can chat markets, football banter, life advice. switch to CF Trader for posh market analysis or CF Eliza for spiritual vibes innit</div>
+            </div>
+            <div class="mascot-demo-cta">
+              <strong onclick="cfToggle()">Try it now &rarr;</strong> Click the mascot in the bottom right corner
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI VOICE RECEPTIONIST -->
+    <section class="section" id="voice-receptionist">
+      <div class="clone-banner fade-up" style="flex-direction: column; text-align: center; align-items: center;">
+        <div class="clone-banner-badge">AI Voice Receptionist &mdash; Now Live</div>
+        <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 12px; line-height: 1.2;">Your AI Answers the Phone. For Real.</h2>
+        <p style="font-size: 16px; color: var(--text2); max-width: 700px; line-height: 1.7; margin-bottom: 24px;">
+          Connect your Switchboard Free number, choose a voice, and your AI receptionist handles every call &mdash; greeting callers, answering questions, and taking messages. It speaks naturally with text-to-speech, holds multi-turn conversations, and never misses a call.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; width: 100%; max-width: 800px; margin-bottom: 24px;">
+          <div style="background: rgba(0,212,170,0.08); border-radius: 14px; padding: 18px; border: 1px solid rgba(0,212,170,0.2);">
+            <div style="font-size: 24px; margin-bottom: 6px;">&#127911;</div>
+            <div style="font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 4px;">6 AI Voices</div>
+            <div style="font-size: 12px; color: var(--text2);">Nova, Alloy, Echo, Fable, Onyx, Shimmer &mdash; pick the perfect voice</div>
+          </div>
+          <div style="background: rgba(139,92,246,0.08); border-radius: 14px; padding: 18px; border: 1px solid rgba(139,92,246,0.2);">
+            <div style="font-size: 24px; margin-bottom: 6px;">&#128483;</div>
+            <div style="font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 4px;">Upload Your Voice</div>
+            <div style="font-size: 12px; color: var(--text2);">Record or upload your own voice sample for a personalised touch</div>
+          </div>
+          <div style="background: rgba(255,107,157,0.08); border-radius: 14px; padding: 18px; border: 1px solid rgba(255,107,157,0.2);">
+            <div style="font-size: 24px; margin-bottom: 6px;">&#128172;</div>
+            <div style="font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 4px;">Multi-Turn Calls</div>
+            <div style="font-size: 12px; color: var(--text2);">Holds real conversations with callers &mdash; not just a voicemail</div>
+          </div>
+          <div style="background: rgba(255,215,0,0.08); border-radius: 14px; padding: 18px; border: 1px solid rgba(255,215,0,0.2);">
+            <div style="font-size: 24px; margin-bottom: 6px;">&#128176;</div>
+            <div style="font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 4px;">30 Credits/Day</div>
+            <div style="font-size: 12px; color: var(--text2);">Unlimited inbound calls up to 3,000 minutes per number</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="#pricing" class="btn-primary" style="padding: 14px 28px; font-size: 15px;">Get Started</a>
+          <a href="/api/webhook/switchboard/health" target="_blank" class="btn-secondary" style="padding: 14px 28px; font-size: 15px;">View System Health</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI TOOLS / FEATURES -->
+    <section class="section" id="ai-tools">
+      <div class="section-header fade-up">
+        <div class="section-tag">&#9889; The Power of CFGPT</div>
+        <h2 class="section-title">AI Tools Built for Everyday Life</h2>
+        <p class="section-desc">
+          From smart AI chat to voice call handling, CFGPT puts the power of artificial intelligence in your hands. No tech skills needed.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background: rgba(0, 212, 170, 0.15);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--tint)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <h3>Multi-Provider AI Chat</h3>
+          <p>Chat with Claude AI, OpenAI, or our default engine. Switch between AI providers in real-time. The smartest AI at your fingertips, always.</p>
+        </div>
+
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background: rgba(255, 107, 157, 0.15);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <h3>Image & Video Generation</h3>
+          <p>Create stunning images and videos with AI. Just describe what you want and watch the magic happen. Perfect for social media, marketing, and creative projects.</p>
+        </div>
+
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background: rgba(59, 130, 246, 0.15);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <h3>AI Mascot for Business</h3>
+          <p>Add an interactive AI chatbot to your website. Your visitors get a friendly AI companion that answers questions, engages customers, and works 24/7.</p>
+        </div>
+
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background: rgba(139, 92, 246, 0.15);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="beta-tag">Live</span>
+          <h3>Clone Me Receptionist</h3>
+          <p>Upload your voice and let AI answer your calls. Choose from 6 professional TTS voices or use your own voice sample. Your AI receptionist handles multi-turn conversations naturally.</p>
+        </div>
+
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background: rgba(255, 215, 0, 0.15);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <span class="beta-tag">Live</span>
+          <h3>AI Phone Agent</h3>
+          <p>Connect your phone numbers to AI agents via Switchboard Free. Your AI answers calls with voice, holds conversations, takes messages, and works 24/7. Just 30 credits/day per number.</p>
+        </div>
+
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background: rgba(16, 185, 129, 0.15);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Matrix Backgrounds</h3>
+          <p>Customise your app with Matrix-style animated backgrounds. Choose green, red, or blue digital rain effects. A unique visual experience for just 1 credit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLONE ME BANNER -->
+    <section class="section" id="clone-me" style="padding-top: 20px;">
+      <div class="clone-banner fade-up">
+        <div class="clone-banner-content">
+          <div class="clone-banner-badge">Beta Testing</div>
+          <h3>Clone Me &mdash; Virtual AI Receptionist</h3>
+          <p>
+            The future of phone calls is here. Clone your voice and let an AI version of you handle
+            your calls 24/7. Set up your own virtual number, customise responses, and never miss
+            a business call again. Currently in beta &mdash; download the app to try it.
+          </p>
+          <div class="clone-banner-actions">
+            <a href="/app" class="btn-purple">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></svg>
+              Try Clone Me Beta
+            </a>
+            <a href="#download" class="btn-secondary" style="padding: 14px 28px; font-size: 15px; background: transparent;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download App
+            </a>
+          </div>
+        </div>
+        <div class="clone-banner-icon">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing" style="padding-top: 40px;">
+      <div class="section-header fade-up">
+        <div class="section-tag">&#128176; Pricing</div>
+        <h2 class="section-title">Simple, Honest Pricing</h2>
+        <p class="section-desc">
+          Start free with 5 AI messages. Top up with credits when you're ready. No subscriptions, no hidden fees.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card fade-up">
+          <div class="pricing-name">Free Trial</div>
+          <div class="pricing-price">&pound;0</div>
+          <div class="pricing-period">to get started</div>
+          <div class="pricing-credits">5 Free Messages</div>
+          <div class="pricing-daily">Try everything before you buy</div>
+          <ul class="pricing-features">
+            <li><span class="check">&#10003;</span> 5 free AI messages</li>
+            <li><span class="check">&#10003;</span> All 3 AI providers</li>
+            <li><span class="check">&#10003;</span> AI mascot chat</li>
+            <li><span class="check">&#10003;</span> Guest access, no signup</li>
+          </ul>
+          <a href="/app" class="pricing-btn pricing-btn-secondary">Try Free Now</a>
+        </div>
+
+        <div class="pricing-card featured fade-up">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-name">Starter Pack</div>
+          <div class="pricing-price">&pound;10</div>
+          <div class="pricing-period">one-time payment</div>
+          <div class="pricing-credits">600 Credits</div>
+          <div class="pricing-daily">20 credits per day for 30 days</div>
+          <ul class="pricing-features">
+            <li><span class="check">&#10003;</span> 600 AI credits</li>
+            <li><span class="check">&#10003;</span> Claude, OpenAI & Default AI</li>
+            <li><span class="check">&#10003;</span> Image generation</li>
+            <li><span class="check">&#10003;</span> Video generation</li>
+            <li><span class="check">&#10003;</span> Matrix backgrounds</li>
+            <li><span class="check">&#10003;</span> Clone Me beta access</li>
+          </ul>
+          <a href="https://www.paypal.com/ncp/payment/WD54CP3YU6PHW" target="_blank" class="pricing-btn pricing-btn-primary">Get 600 Credits</a>
+        </div>
+
+        <div class="pricing-card fade-up">
+          <div class="pricing-badge" style="background: linear-gradient(135deg, #FFD700, #FFA500);">Best Value</div>
+          <div class="pricing-name">Pro Pack</div>
+          <div class="pricing-price">&pound;20</div>
+          <div class="pricing-period">one-time payment</div>
+          <div class="pricing-credits">1,500 Credits</div>
+          <div class="pricing-daily">50 credits per day for 30 days</div>
+          <ul class="pricing-features">
+            <li><span class="check">&#10003;</span> 1,500 AI credits</li>
+            <li><span class="check">&#10003;</span> Claude, OpenAI & Default AI</li>
+            <li><span class="check">&#10003;</span> Image generation</li>
+            <li><span class="check">&#10003;</span> Video generation</li>
+            <li><span class="check">&#10003;</span> Matrix backgrounds</li>
+            <li><span class="check">&#10003;</span> Clone Me beta access</li>
+            <li><span class="check">&#10003;</span> Virtual numbers</li>
+            <li><span class="check">&#10003;</span> Priority AI access</li>
+          </ul>
+          <a href="https://www.paypal.com/ncp/payment/R39384B5P4SMG" target="_blank" class="pricing-btn pricing-btn-gold">Get 1,500 Credits</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px; padding: 24px; background: var(--card); border-radius: 16px; max-width: 700px; margin-left: auto; margin-right: auto;" class="fade-up">
+        <p style="font-size: 15px; color: var(--text2); margin-bottom: 8px;">
+          <strong style="color: var(--text);">How credits work:</strong> Each AI message, image, or action costs 1 credit. Matrix backgrounds cost 1 credit for 7 days. Virtual numbers cost 30 credits/day.
+        </p>
+        <p style="font-size: 13px; color: var(--text3);">Payments processed securely via PayPal. Credits never expire once purchased.</p>
+      </div>
+    </section>
+
+    <!-- CTA / DOWNLOAD -->
+    <section class="cta-section" id="download">
+      <div class="cta-inner fade-up">
+        <div class="section-tag">&#9889; Get CFGPT</div>
+        <h2 class="cta-title">Start Using <span style="background: linear-gradient(135deg, var(--tint), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">CFGPT</span> Today</h2>
+        <p class="cta-desc">
+          Launch in your browser instantly, or download via Expo Go for the full mobile experience. Currently in beta testing &mdash; be one of the first.
+        </p>
+
+        <div class="hero-actions" style="margin-bottom: 32px;">
+          <a href="/app" class="btn-primary" style="font-size: 20px; padding: 20px 48px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></svg>
+            Launch CFGPT Now
+          </a>
+        </div>
+
+        <p style="font-size: 14px; color: var(--text3); margin-bottom: 20px;">Also available on mobile via Expo Go (beta)</p>
+
+        <div class="app-download-row">
+          <a href="https://apps.apple.com/app/expo-go/id982107779" target="_blank" rel="noopener" class="app-download-btn">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="var(--text)"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+            <div class="app-download-info">
+              <div class="app-download-small">Download on the</div>
+              <div class="app-download-name">App Store</div>
+            </div>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=host.exp.exponent" target="_blank" rel="noopener" class="app-download-btn">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="var(--text)"><path d="M3.18 23.82c-.35-.35-.18-.93-.18-1.32V1.5c0-.39-.17-.97.18-1.32L13.5 12 3.18 23.82zm1.06 1.06L15.56 13.5l2.94 2.94-12.26 7.08c-.56.32-1.32.48-2 .36zM15.56 10.5L4.24.12C4.92 0 5.68.16 6.24.48l12.26 7.08-2.94 2.94zm3.8 2.19l-2.86-2.19 2.86-2.19 3.22 1.86c.74.43.74 1.23 0 1.66l-3.22 1.86z"/></svg>
+            <div class="app-download-info">
+              <div class="app-download-small">Get it on</div>
+              <div class="app-download-name">Google Play</div>
+            </div>
+          </a>
+        </div>
+
+        <p style="font-size: 13px; color: var(--text3); margin-bottom: 8px;">Scan with Expo Go to open CFGPT on your phone</p>
+        <div class="qr-area" id="qr-code"></div>
+        <p class="qr-label">Scan QR code with Expo Go app</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom: 8px;">
+            <div class="nav-logo-icon">CF</div>
+            CFGPT
+          </div>
+          <p>The new Ultra AI company building intelligence into everyday life. AI chat, voice cloning, image generation, and interactive chatbots for businesses.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="#ai-tools">AI Tools</a>
+          <a href="#mascot">AI Mascot</a>
+          <a href="#clone-me">Clone Me</a>
+          <a href="#pricing">Pricing</a>
+          <a href="/app">Launch App</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="mailto:smmasolutionsltd@gmail.com">Contact Us</a>
+          <a href="#ai-tools">Documentation</a>
+          <a href="#pricing">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">THE CF BLOCKCHAIN</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CFGPT &mdash; THE CF BLOCKCHAIN. All rights reserved.</span>
+        <span>Building AI for everyone</span>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/qr-code-styling@1.6.0/lib/qr-code-styling.js"></script>
+    <script>
+      (function () {
+        // Mobile nav toggle
+        const toggle = document.getElementById('nav-toggle');
+        const links = document.getElementById('nav-links');
+        toggle.addEventListener('click', () => {
+          links.classList.toggle('open');
+        });
+        links.querySelectorAll('a').forEach(a => {
+          a.addEventListener('click', () => links.classList.remove('open'));
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // QR Code
+        const deepLink = "exps://EXPS_URL_PLACEHOLDER";
+        const qrCode = new QRCodeStyling({
+          width: 320,
+          height: 320,
+          data: deepLink,
+          dotsOptions: { color: "#0A0E1A", type: "rounded" },
+          backgroundOptions: { color: "#ffffff" },
+          cornersSquareOptions: { type: "extra-rounded" },
+          cornersDotOptions: { type: "dot" },
+          qrOptions: { errorCorrectionLevel: "H" },
+        });
+        qrCode.append(document.getElementById("qr-code"));
+
+        // Auto-open on mobile
+        const ua = navigator.userAgent;
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+        if (isMobile) {
+          // Don't auto-redirect, let users browse the website
+        }
+      })();
+    </script>
+
+    <!-- CF Mascot Chatbot -->
+    <style>
+      #cf-mascot-wrap { position: fixed; bottom: 24px; right: 24px; z-index: 99999; font-family: 'Inter', sans-serif; }
+      #cf-fab { width: 68px; height: 68px; border-radius: 50%; background: var(--card); border: 2px solid var(--tint); cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,212,170,0.35); animation: cf-bounce 3s ease-in-out infinite; transition: transform .2s; overflow: hidden; }
+      #cf-fab:hover { transform: scale(1.1); }
+      #cf-fab img { width: 60px; height: 60px; border-radius: 50%; }
+      #cf-fab-badge { position: absolute; top: 2px; right: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--card); display: flex; align-items: center; justify-content: center; }
+      #cf-fab-badge span { width: 10px; height: 10px; border-radius: 50%; background: #22C55E; display: block; }
+      @keyframes cf-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      
+      #cf-chat { position: fixed; bottom: 100px; right: 24px; width: 360px; max-width: calc(100vw - 32px); height: 480px; background: var(--bg2); border: 1px solid var(--border-light); border-radius: 20px; display: none; flex-direction: column; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.5); z-index: 99998; animation: cf-pop .25s ease-out; }
+      #cf-chat.open { display: flex; }
+      @keyframes cf-pop { from { transform: scale(0.8) translateY(20px); opacity: 0; } to { transform: scale(1) translateY(0); opacity: 1; } }
+      
+      #cf-chat-header { display: flex; align-items: center; padding: 12px 14px; border-bottom: 1px solid var(--border); background: var(--card); }
+      #cf-chat-header img { width: 36px; height: 36px; border-radius: 50%; cursor: pointer; margin-right: 10px; }
+      .cf-header-info { flex: 1; cursor: pointer; }
+      .cf-header-name { font-weight: 700; font-size: 15px; }
+      .cf-header-tagline { font-size: 11px; margin-top: 1px; }
+      .cf-header-status { display: flex; align-items: center; gap: 5px; margin-top: 1px; }
+      .cf-header-status span { width: 7px; height: 7px; border-radius: 50%; background: #22C55E; }
+      .cf-header-status small { color: #22C55E; font-size: 11px; }
+      .cf-close-btn { background: none; border: none; color: var(--text2); cursor: pointer; font-size: 22px; padding: 4px; line-height: 1; }
+      .cf-clear-btn { background: none; border: none; color: var(--text2); cursor: pointer; font-size: 16px; padding: 4px; margin-right: 4px; }
+      .cf-people-btn { background: none; border: none; color: var(--text2); cursor: pointer; font-size: 18px; padding: 4px; margin-right: 4px; }
+      
+      #cf-messages { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+      #cf-messages::-webkit-scrollbar { width: 4px; }
+      #cf-messages::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+      
+      .cf-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; padding: 30px 20px; text-align: center; }
+      .cf-empty img { width: 72px; height: 72px; border-radius: 50%; margin-bottom: 12px; }
+      .cf-empty h4 { font-size: 18px; margin-bottom: 6px; }
+      .cf-empty p { color: var(--text2); font-size: 13px; line-height: 1.5; }
+      .cf-switch-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; padding: 6px 14px; border-radius: 20px; border: 1px solid; font-size: 12px; cursor: pointer; text-decoration: none; }
+      
+      .cf-msg { display: flex; align-items: flex-end; }
+      .cf-msg-user { justify-content: flex-end; }
+      .cf-msg-bot { justify-content: flex-start; }
+      .cf-msg-bot img { width: 26px; height: 26px; border-radius: 50%; margin-right: 6px; flex-shrink: 0; }
+      .cf-bubble { max-width: 75%; padding: 8px 12px; border-radius: 16px; font-size: 13px; line-height: 1.4; }
+      .cf-bubble-user { background: var(--tint); color: #0A0E1A; border-bottom-right-radius: 4px; }
+      .cf-bubble-bot { background: var(--card); color: var(--text); border-bottom-left-radius: 4px; }
+      
+      #cf-input-row { display: flex; align-items: flex-end; padding: 8px 10px; border-top: 1px solid var(--border); background: var(--card); gap: 8px; }
+      #cf-input { flex: 1; background: var(--bg2); border: 1px solid var(--border-light); border-radius: 20px; padding: 8px 14px; color: var(--text); font-size: 14px; font-family: 'Inter', sans-serif; outline: none; resize: none; max-height: 80px; }
+      #cf-input::placeholder { color: var(--text3); }
+      #cf-send { width: 36px; height: 36px; border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: opacity .2s; }
+      #cf-send:disabled { background: var(--card); opacity: 0.5; }
+      #cf-send svg { fill: #0A0E1A; width: 18px; height: 18px; }
+
+      #cf-selector { flex: 1; overflow-y: auto; padding: 16px; display: none; flex-direction: column; }
+      #cf-selector.open { display: flex; }
+      #cf-selector h3 { color: var(--text); font-size: 17px; margin-bottom: 4px; }
+      #cf-selector p { color: var(--text2); font-size: 12px; margin-bottom: 16px; }
+      .cf-p-card { background: var(--card); border-radius: 14px; padding: 14px; margin-bottom: 10px; border: 1px solid var(--border); cursor: pointer; position: relative; transition: border-color .2s; }
+      .cf-p-card:hover { opacity: 0.9; }
+      .cf-p-card.selected { border-width: 2px; }
+      .cf-p-icon { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; font-size: 20px; }
+      .cf-p-name { font-weight: 700; font-size: 15px; color: var(--text); margin-bottom: 2px; }
+      .cf-p-tag { font-size: 12px; margin-bottom: 4px; }
+      .cf-p-desc { color: var(--text3); font-size: 11px; line-height: 1.45; }
+      .cf-p-check { position: absolute; top: 10px; right: 10px; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #000; }
+    </style>
+
+    <div id="cf-mascot-wrap">
+      <div id="cf-chat">
+        <div id="cf-chat-header">
+          <img src="/attached_assets/cf_urban.png" alt="CF" onclick="cfShowSelector()" />
+          <div class="cf-header-info" onclick="cfShowSelector()">
+            <div class="cf-header-name" id="cf-hdr-name">CF Urban</div>
+            <div class="cf-header-tagline" id="cf-hdr-tagline">your crypto companion</div>
+          </div>
+          <button class="cf-people-btn" onclick="cfShowSelector()" title="Switch personality">&#128101;</button>
+          <button class="cf-clear-btn" onclick="cfClearChat()" title="Clear chat">&#128465;</button>
+          <button class="cf-close-btn" onclick="cfToggle()" title="Close">&times;</button>
+        </div>
+        <div id="cf-selector">
+          <h3>Choose your AI assistant</h3>
+          <p>Each has a unique personality</p>
+          <div id="cf-selector-cards"></div>
+        </div>
+        <div id="cf-messages">
+          <div class="cf-empty" id="cf-empty">
+            <img src="/attached_assets/cf_urban.png" alt="CF" id="cf-empty-img" />
+            <h4 id="cf-empty-title">CF Urban</h4>
+            <p id="cf-empty-text">your crypto companion from CFGPT<br/>ask me anything - crypto, football, gossip<br/>i'm free to chat 24/7 fam</p>
+            <a class="cf-switch-link" id="cf-empty-switch" onclick="cfShowSelector()">&#128101; switch personality</a>
+          </div>
+        </div>
+        <div id="cf-input-row">
+          <input id="cf-input" placeholder="say something to CF Urban..." maxlength="500" />
+          <button id="cf-send" onclick="cfSend()" disabled>
+            <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="cf-fab" onclick="cfToggle()" style="position:relative">
+        <img src="/attached_assets/cf_urban.png" alt="CF Mascot" id="cf-fab-img" />
+        <div id="cf-fab-badge"><span></span></div>
+      </div>
+    </div>
+
+    <script>
+    (function() {
+      const STORE_KEY = 'cfgpt_mascot_landing';
+      const PERS_KEY = 'cfgpt_mascot_personality';
+      let cfOpen = false;
+      let cfMessages = [];
+      let cfStreaming = false;
+      let cfSelectorOpen = false;
+
+      const personalities = [
+        { id: 'urban', name: 'CF Urban', tagline: 'your crypto companion', description: 'Streetwise, laid-back, crypto & football banter', color: '#00E676', icon: '&#9889;', avatar: '/attached_assets/cf_urban.png', greeting: 'your crypto companion from CFGPT<br/>ask me anything - crypto, football, gossip<br/>i\'m free to chat 24/7 fam' },
+        { id: 'trader', name: 'CF Trader', tagline: 'your elite market analyst', description: 'Posh London trader, witty comedian, luxury vibes', color: '#FFD700', icon: '&#128200;', avatar: '/attached_assets/cf_trader.png', greeting: 'your elite market companion<br/>let\'s discuss crypto, markets & the finer things<br/>at your service, naturally' },
+        { id: 'eliza', name: 'CF Eliza', tagline: 'your spiritual bestie', description: 'Positivity, affirmations, spiritual vibes & gossip', color: '#FF69B4', icon: '&#10084;', avatar: '/attached_assets/cf_eliza.png', greeting: 'your spiritual bestie from CFGPT<br/>let\'s chat love, positivity, soaps & gossip<br/>you\'re glowing today, babe' },
+      ];
+      let currentP = localStorage.getItem(PERS_KEY) || 'urban';
+      if (!['urban','trader','eliza'].includes(currentP)) currentP = 'urban';
+
+      try { cfMessages = JSON.parse(localStorage.getItem(STORE_KEY) || '[]'); } catch {}
+
+      const chatEl = document.getElementById('cf-chat');
+      const msgsEl = document.getElementById('cf-messages');
+      const emptyEl = document.getElementById('cf-empty');
+      const inputEl = document.getElementById('cf-input');
+      const sendBtn = document.getElementById('cf-send');
+      const selectorEl = document.getElementById('cf-selector');
+      const selectorCards = document.getElementById('cf-selector-cards');
+
+      function getP() { return personalities.find(p => p.id === currentP) || personalities[0]; }
+
+      function updateUI() {
+        const p = getP();
+        document.getElementById('cf-hdr-name').textContent = p.name;
+        document.getElementById('cf-hdr-name').style.color = p.color;
+        document.getElementById('cf-hdr-tagline').textContent = p.tagline;
+        document.getElementById('cf-hdr-tagline').style.color = p.color;
+        const hdrImg = document.getElementById('cf-chat-header').querySelector('img');
+        hdrImg.src = p.avatar;
+        hdrImg.style.borderColor = p.color;
+        const emptyImg = document.getElementById('cf-empty-img');
+        emptyImg.src = p.avatar;
+        emptyImg.style.borderColor = p.color;
+        document.getElementById('cf-empty-title').textContent = p.name;
+        document.getElementById('cf-empty-title').style.color = p.color;
+        document.getElementById('cf-empty-text').innerHTML = p.greeting;
+        document.getElementById('cf-empty-switch').style.borderColor = p.color + '60';
+        document.getElementById('cf-empty-switch').style.color = p.color;
+        inputEl.placeholder = 'say something to ' + p.name + '...';
+        sendBtn.style.background = (!inputEl.value.trim() || cfStreaming) ? 'var(--card)' : p.color;
+        const fabImg = document.getElementById('cf-fab').querySelector('img');
+        fabImg.src = p.avatar;
+        document.getElementById('cf-fab').style.borderColor = p.color;
+        document.getElementById('cf-fab-badge').querySelector('span').style.background = p.color;
+      }
+
+      function buildSelector() {
+        selectorCards.innerHTML = '';
+        personalities.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'cf-p-card' + (p.id === currentP ? ' selected' : '');
+          card.style.borderColor = p.id === currentP ? p.color : '';
+          card.innerHTML = '<img src="' + p.avatar + '" style="width:48px;height:48px;border-radius:50%;border:2px solid ' + p.color + ';object-fit:cover;margin-bottom:8px" />'
+            + '<div class="cf-p-name">' + p.name + '</div>'
+            + '<div class="cf-p-tag" style="color:' + p.color + '">' + p.tagline + '</div>'
+            + '<div class="cf-p-desc">' + p.description + '</div>'
+            + (p.id === currentP ? '<div class="cf-p-check" style="background:' + p.color + '">&#10003;</div>' : '');
+          card.onclick = function() { selectPersonality(p.id); };
+          selectorCards.appendChild(card);
+        });
+      }
+
+      window.selectPersonality = function(id) {
+        currentP = id;
+        localStorage.setItem(PERS_KEY, id);
+        cfMessages = [];
+        localStorage.removeItem(STORE_KEY);
+        cfSelectorOpen = false;
+        selectorEl.classList.remove('open');
+        msgsEl.style.display = 'flex';
+        document.getElementById('cf-input-row').style.display = 'flex';
+        updateUI();
+        renderMessages();
+        buildSelector();
+      }
+
+      window.cfShowSelector = function() {
+        cfSelectorOpen = !cfSelectorOpen;
+        if (cfSelectorOpen) {
+          selectorEl.classList.add('open');
+          msgsEl.style.display = 'none';
+          document.getElementById('cf-input-row').style.display = 'none';
+          buildSelector();
+        } else {
+          selectorEl.classList.remove('open');
+          msgsEl.style.display = 'flex';
+          document.getElementById('cf-input-row').style.display = 'flex';
+        }
+      };
+
+      inputEl.addEventListener('input', () => {
+        sendBtn.disabled = !inputEl.value.trim() || cfStreaming;
+        const p = getP();
+        sendBtn.style.background = (!inputEl.value.trim() || cfStreaming) ? 'var(--card)' : p.color;
+      });
+      inputEl.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); cfSend(); } });
+
+      window.cfToggle = function() {
+        cfOpen = !cfOpen;
+        chatEl.classList.toggle('open', cfOpen);
+        if (cfSelectorOpen) {
+          cfSelectorOpen = false;
+          selectorEl.classList.remove('open');
+          msgsEl.style.display = 'flex';
+          document.getElementById('cf-input-row').style.display = 'flex';
+        }
+        if (cfOpen && cfMessages.length > 0) renderMessages();
+      };
+
+      window.cfClearChat = function() {
+        cfMessages = [];
+        localStorage.removeItem(STORE_KEY);
+        renderMessages();
+      };
+
+      function renderMessages() {
+        if (cfMessages.length === 0) {
+          emptyEl.style.display = 'flex';
+          const bubbles = msgsEl.querySelectorAll('.cf-msg');
+          bubbles.forEach(b => b.remove());
+          return;
+        }
+        emptyEl.style.display = 'none';
+        const bubbles = msgsEl.querySelectorAll('.cf-msg');
+        bubbles.forEach(b => b.remove());
+        cfMessages.forEach(m => appendBubble(m.role, m.content));
+        msgsEl.scrollTop = msgsEl.scrollHeight;
+      }
+
+      function appendBubble(role, text) {
+        emptyEl.style.display = 'none';
+        const row = document.createElement('div');
+        row.className = 'cf-msg cf-msg-' + (role === 'user' ? 'user' : 'bot');
+        if (role !== 'user') {
+          const img = document.createElement('img');
+          img.src = getP().avatar;
+          img.style.borderColor = getP().color;
+          img.style.border = '1.5px solid ' + getP().color;
+          row.appendChild(img);
+        }
+        const bub = document.createElement('div');
+        bub.className = 'cf-bubble cf-bubble-' + (role === 'user' ? 'user' : 'bot');
+        bub.textContent = text;
+        row.appendChild(bub);
+        msgsEl.appendChild(row);
+        msgsEl.scrollTop = msgsEl.scrollHeight;
+        return bub;
+      }
+
+      window.cfSend = async function() {
+        const text = inputEl.value.trim();
+        if (!text || cfStreaming) return;
+        inputEl.value = '';
+        sendBtn.disabled = true;
+        cfStreaming = true;
+
+        cfMessages.push({ role: 'user', content: text });
+        appendBubble('user', text);
+
+        const botBub = appendBubble('assistant', '...');
+
+        try {
+          const apiMsgs = cfMessages.slice(-10).map(m => ({ role: m.role, content: m.content }));
+          if (!localStorage.getItem('cfgpt_visitor_id')) {
+            localStorage.setItem('cfgpt_visitor_id', Math.random().toString(36).substr(2));
+          }
+          const res = await fetch('/api/mascot-chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ messages: apiMsgs, userId: 'landing_' + localStorage.getItem('cfgpt_visitor_id'), personality: currentP })
+          });
+
+          if (!res.ok) throw new Error('API error');
+
+          const data = await res.json();
+
+          if (data.content) {
+            botBub.textContent = data.content;
+            cfMessages.push({ role: 'assistant', content: data.content });
+          } else {
+            botBub.textContent = "something went wrong, try again in a sec";
+            cfMessages.push({ role: 'assistant', content: "something went wrong, try again in a sec" });
+          }
+        } catch (err) {
+          botBub.textContent = "something went wrong, try again in a sec";
+          cfMessages.push({ role: 'assistant', content: "something went wrong, try again in a sec" });
+        }
+
+        localStorage.setItem(STORE_KEY, JSON.stringify(cfMessages.slice(-30)));
+        cfStreaming = false;
+        sendBtn.disabled = !inputEl.value.trim();
+        const p = getP();
+        sendBtn.style.background = (!inputEl.value.trim() || cfStreaming) ? 'var(--card)' : p.color;
+      };
+
+      updateUI();
+      buildSelector();
+      if (cfMessages.length > 0) renderMessages();
+    })();
+    </script>
+    <script type="text/javascript">
+      if (typeof aclib !== 'undefined') {
+        aclib.runAutoTag({
+          zoneId: '5itnttwtfa',
+        });
+      }
+    </script>
+  </body>
+</html>

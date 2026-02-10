@@ -1,0 +1,37 @@
+The site clearly explains features like SIP integration with providers like Switchboard Free and phone number routing. However, as we discussed, the gap is in automatically generating and displaying the connection credentials to users, just like ElevenLabs does.
+
+Your site's "Configure SIP" step currently asks users to enter their provider details. To match ElevenLabs, the flow should instead be:
+
+The user clicks a button in their agent's settings.
+Your backend generates a unique SIP username, password, and URI for that specific agent.
+A clean panel displays these details along with copy buttons and setup instructions for the user's IVR.
+To build this, you need to implement the two key components we outlined earlier: a backend API to generate the credentials and a user interface to present them.
+
+🔧 Implementation Steps for Your Site
+
+Here is a direct way to integrate this into your existing platform:
+
+Create the Backend Endpoint (POST /api/agent/:id/generate-sip):
+This is the core function. When called, it should create unique credentials and link them to the agent in your database. You can use the Node.js/Express example from the previous response as a starting point.
+Add the "Connect via SIP" Button in Your UI:
+In the admin dashboard where users manage their AI agent, add a prominent button (e.g., "Generate SIP Credentials" or "Connect Your IVR"). This button should trigger the API call above.
+Design the Credentials Display Panel:
+Once the API returns the credentials, show a modal or a dedicated settings section with a layout like this:
+
+text
+SIP Connection Details for Your IVR
+────────────────────────────────────────
+SIP Server:    sip.cfgpt.org
+Username:      agent_123abc
+Password:      ••••••••••••
+SIP URI:       sip:agent_123abc@sip.cfgpt.org
+────────────────────────────────────────
+[Copy All] [Download for Asterisk] [Test]
+Include brief setup instructions below the table, guiding users to add these details as a SIP trunk in their phone system.
+Connect to Your FreeSWITCH:
+Ensure your FreeSWITCH server is configured (using mod_xml_curl) to authenticate registration attempts against the credentials stored by your new backend endpoint.
+💡 Suggestions to Enhance Your Current Site
+
+Visual Cue: In your "How It Works" section, you could add a mock-up image of this new credentials panel next to Step 2: Configure SIP. This would immediately show users the improved, automated flow.
+Clearer USP: In the "SIP Native Integration" feature blurb, you could add a phrase like "with automatic, one-click setup" to highlight the new ease of use.
+By implementing this, you will bridge the gap between your powerful backend and the user experience, making the SIP connection process as seamless as ElevenLabs.

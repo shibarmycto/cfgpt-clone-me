@@ -1,0 +1,927 @@
+===============================================================================
+LOVABLE.DEV PROJECT PROMPT: CUSTOM SIP AI VOICE RECEPTIONIST PLATFORM
+===============================================================================
+
+PROJECT OVERVIEW
+===============================================================================
+Create a comprehensive AI voice receptionist platform that replaces Twilio 
+with custom SIP integration using Switchboard Free (or any custom SIP provider). 
+The system should clone Resemble.AI's infrastructure capabilities while adding 
+custom SIP functionality for inbound call handling with AI voice clones.
+
+
+CORE FEATURES REQUIRED
+===============================================================================
+
+1. SIP CONFIGURATION MANAGEMENT
+-------------------------------------------------------------------------------
+Create a user-friendly SIP configuration interface with the following fields:
+
+Provider Display Name: CFSMS Switchboard (customizable for any provider)
+
+Configuration Fields:
+- Domain/SIP Server (e.g., reg5.switchboardfree.co.uk)
+- Port (separate field, default: 5065)
+- SIP Username (e.g., __23725.2testaccou__)
+- Authorization Username (e.g., #PurplePhone5772)
+- SIP/Voice Password (secure field)
+- Transport Protocol (dropdown: TCP, UDP, TLS)
+- Inbound Phone Number (e.g., 03333357324)
+- Allowed From Numbers (whitelist for call forwarding/diversion)
+
+Requirements:
+- Support ANY custom SIP provider, not limited to Twilio
+- Validate domain format (no port numbers in domain field)
+- Secure credential storage
+- Test connection button
+- Inbound calls ONLY functionality
+- Call diversion setup instructions
+
+
+2. VOICE CLONING SYSTEM (MULTI-PROVIDER)
+-------------------------------------------------------------------------------
+Create three voice cloning channels with provider options:
+
+CHANNEL 1: RESEMBLE.AI INTEGRATION
+- API key configuration
+- Voice upload and training
+- Voice sample management
+- Clone voice from audio files
+
+CHANNEL 2: ELEVENLABS INTEGRATION
+- API key configuration
+- Voice library access
+- Instant voice cloning
+- Professional voice training
+
+CHANNEL 3: CFGPT CUSTOM SYSTEM
+- Proprietary voice cloning engine
+- Local processing option
+- Custom model training
+- Voice sample storage
+
+UNIFIED VOICE MANAGEMENT:
+- Voice library/repository for all channels
+- Upload voice samples (MP3, WAV, M4A)
+- Voice preview/playback
+- Voice quality metrics
+- Voice switching between providers
+- Export/import voice profiles
+
+
+3. AI RECEPTIONIST CONFIGURATION
+-------------------------------------------------------------------------------
+Create a "Clone Receptionist" tab with:
+
+AI PROVIDER MANAGEMENT:
+- Multi-provider support (OpenAI, Anthropic, Google, Cohere, local models)
+- Private API key management per provider
+- Model selection dropdown
+- Temperature and response settings
+- Custom system prompts
+- Fallback provider configuration
+
+RECEPTIONIST PERSONALITY:
+- Name and greeting configuration
+- Response templates
+- Business hours settings
+- Call routing rules
+- Voicemail handling
+- Transfer capabilities
+- FAQ knowledge base
+- Custom scripts for different scenarios
+
+VOICE + AI INTEGRATION:
+- Link selected voice clone to AI agent
+- Real-time speech-to-text
+- AI response generation
+- Text-to-speech with cloned voice
+- Conversation logging
+- Call analytics
+
+
+4. COMPLETE INFRASTRUCTURE CLONE
+-------------------------------------------------------------------------------
+Replicate Resemble.AI's full infrastructure:
+
+REQUIRED REPOSITORIES/PACKAGES:
+- Voice cloning engine (TTS/STT)
+- SIP client library (PJSIP or similar)
+- WebRTC implementation
+- Audio processing pipeline
+- Real-time streaming
+- Call session management
+- Database schema for voice storage
+- API gateway
+- Authentication system
+- Admin dashboard
+- User management
+- Billing/usage tracking
+
+TECHNOLOGY STACK:
+- Frontend: React/Next.js
+- Backend: Node.js/Python FastAPI
+- Database: PostgreSQL + Vector DB for voice embeddings
+- Real-time: WebSocket/Socket.io
+- SIP: PJSIP/Asterisk integration
+- Audio: FFmpeg, WebRTC
+- AI: LangChain for multi-provider support
+- Storage: S3-compatible for voice files
+
+
+5. CALL FLOW ARCHITECTURE
+-------------------------------------------------------------------------------
+INBOUND CALL PROCESS:
+1. SIP trunk receives call on configured number
+2. Validate caller ID against allowed numbers
+3. Initiate AI receptionist session
+4. Convert incoming audio to text (STT)
+5. Process through selected AI provider
+6. Generate response text
+7. Convert to speech using cloned voice (TTS)
+8. Stream audio back through SIP connection
+9. Log conversation and analytics
+
+SIP INTEGRATION REQUIREMENTS:
+- WebRTC to SIP bridge
+- RTP audio streaming
+- DTMF handling
+- Call recording option
+- Call transfer capability
+- Hold music support
+- Multi-channel support
+- NAT traversal
+- Codec support (G.711, Opus, etc.)
+
+
+6. USER INTERFACE STRUCTURE
+-------------------------------------------------------------------------------
+MAIN NAVIGATION TABS:
+1. Dashboard - Call stats, recent calls, system status
+2. SIP Configuration - Provider setup and testing
+3. Voice Cloning - Upload and manage voice samples across all 3 channels
+4. Clone Receptionist - AI configuration and personality setup
+5. Call Logs - Transcripts, recordings, analytics
+6. Settings - Account, billing, integrations
+7. API Keys - Manage all provider credentials securely
+
+DASHBOARD WIDGETS:
+- Active calls counter
+- Today's call volume
+- AI response accuracy
+- Voice quality metrics
+- SIP connection status
+- Quick test call button
+
+
+7. SECURITY & COMPLIANCE
+-------------------------------------------------------------------------------
+- End-to-end encryption for calls
+- Secure credential vault for API keys
+- GDPR-compliant data handling
+- Call recording consent management
+- PCI compliance for payment data
+- Rate limiting and DDoS protection
+- Audit logs for all configuration changes
+
+
+8. SETUP INSTRUCTIONS GENERATOR
+-------------------------------------------------------------------------------
+Create automated setup guide that generates custom instructions based on 
+user's SIP provider:
+
+EXAMPLE OUTPUT:
+For Switchboard Free Setup:
+1. Purchase a number or use existing: 03333357324
+2. Set up call diversion to your SIP trunk
+3. Configure allowed caller IDs
+4. Enter credentials in SIP Configuration tab
+5. Test connection
+6. Upload voice sample in Voice Cloning tab
+7. Configure AI receptionist personality
+8. Go live!
+
+
+9. TESTING & QUALITY ASSURANCE
+-------------------------------------------------------------------------------
+Build in:
+- SIP connection testing tool
+- Voice quality analyzer
+- AI response simulator
+- Load testing for concurrent calls
+- Latency monitoring
+- Audio clarity metrics
+- End-to-end call simulation
+
+
+10. DOCUMENTATION REQUIREMENTS
+-------------------------------------------------------------------------------
+Generate comprehensive docs:
+- Quick start guide
+- SIP provider compatibility list
+- Voice cloning best practices
+- AI prompt engineering guide
+- Troubleshooting common issues
+- API documentation
+- Webhook integration guide
+
+
+SAMPLE CONFIGURATION REFERENCE
+===============================================================================
+Use these as default examples in the UI:
+
+{
+  "providerName": "CFSMS Switchboard",
+  "domain": "reg5.switchboardfree.co.uk",
+  "port": 5065,
+  "username": "__23725.2testaccou__",
+  "authUsername": "#PurplePhone5772",
+  "password": "#PurplePhone5772",
+  "transport": "TCP",
+  "inboundNumber": "03333357324",
+  "allowedNumbers": ["*"],
+  "direction": "inbound_only"
+}
+
+
+SUCCESS CRITERIA
+===============================================================================
+â Any custom SIP provider can be configured
+â Three voice cloning channels fully operational
+â AI receptionist answers calls with cloned voice
+â Clean, intuitive UI matching modern standards
+â Secure credential management
+â Real-time call handling with <500ms latency
+â Complete call logging and analytics
+â Easy provider switching (AI and Voice)
+â Production-ready, scalable infrastructure
+â Comprehensive documentation
+
+
+DEPLOYMENT REQUIREMENTS
+===============================================================================
+- Containerized with Docker
+- CI/CD pipeline
+- Environment-based configuration
+- Auto-scaling for call volume
+- Monitoring and alerting
+- Backup and disaster recovery
+
+
+DETAILED FEATURE SPECIFICATIONS
+===============================================================================
+
+SIP CONFIGURATION PAGE
+-------------------------------------------------------------------------------
+Form Fields:
+1. Provider Name (text input, default: "CFSMS Switchboard")
+2. SIP Domain (text input, validation: no port numbers)
+   Example: reg5.switchboardfree.co.uk
+   Help text: "Enter domain only, without :port"
+   
+3. Port (number input, default: 5065)
+   Range: 1-65535
+   
+4. SIP Username (text input)
+   Example: __23725.2testaccou__
+   
+5. Authorization Username (text input)
+   Example: #PurplePhone5772
+   
+6. Password (password input, encrypted storage)
+   
+7. Transport (dropdown)
+   Options: TCP, UDP, TLS
+   Default: TCP
+   
+8. Inbound Number (phone input with formatting)
+   Example: 03333357324
+   Validation: E.164 format
+   
+9. Allowed From Numbers (multi-entry)
+   - Add multiple numbers
+   - Wildcard support (*)
+   - Number formatting validation
+
+Buttons:
+- Test Connection (shows real-time status)
+- Save Configuration
+- Reset to Defaults
+
+Validation Rules:
+- Domain must not contain port (:####)
+- Domain must not contain protocol (http://)
+- Domain must not have trailing slash
+- All required fields must be filled
+- Port must be numeric
+- Transport must be selected
+
+
+VOICE CLONING PAGE
+-------------------------------------------------------------------------------
+Layout: Three-column layout for three channels
+
+CHANNEL TEMPLATE (repeated for each):
+Header: [Provider Name] Voice Cloning
+- API Key input (encrypted, toggle show/hide)
+- Test API button
+- Status indicator (connected/disconnected)
+
+Voice Upload Section:
+- Drag & drop audio file upload
+- Support formats: MP3, WAV, M4A, FLAC
+- Min duration: 30 seconds
+- Max file size: 50MB
+- Quality meter (real-time analysis)
+
+Voice Library:
+- Grid view of uploaded voices
+- Play/pause controls
+- Waveform visualization
+- Voice name editing
+- Delete voice option
+- Set as active voice
+
+Training Section:
+- Start training button
+- Progress bar
+- Estimated completion time
+- Quality metrics after training
+
+UNIFIED VOICE MANAGER (sidebar):
+- All voices across providers
+- Quick switch between voices
+- Compare voice quality
+- Export voice profile (JSON)
+- Import voice profile
+
+
+CLONE RECEPTIONIST PAGE
+-------------------------------------------------------------------------------
+AI CONFIGURATION SECTION:
+
+Provider Selection:
+- Dropdown: OpenAI, Anthropic, Google AI, Cohere, Local Model
+- API Key input per provider
+- Model selection dropdown (updates based on provider)
+  - OpenAI: GPT-4, GPT-3.5-turbo
+  - Anthropic: Claude 3 Opus, Sonnet, Haiku
+  - Google: Gemini Pro, Gemini Ultra
+  - Cohere: Command, Command-Light
+
+Model Settings:
+- Temperature slider (0.0 - 1.0)
+- Max tokens slider
+- Top P slider
+- Frequency penalty
+- Presence penalty
+
+PERSONALITY CONFIGURATION:
+
+Basic Info:
+- Receptionist Name (text input)
+- Company Name (text input)
+- Greeting Message (textarea)
+  Example: "Thank you for calling [Company]. How may I help you?"
+
+Response Templates:
+- Opening greeting
+- Closing message
+- Hold message
+- Transfer message
+- Voicemail message
+- After hours message
+- Emergency message
+
+Business Logic:
+- Business hours scheduler (visual calendar)
+- Holiday calendar
+- Call routing rules (if-then builder)
+- Department/extension mapping
+- Priority caller list
+- Blocked caller list
+
+Knowledge Base:
+- FAQ builder (Q&A pairs)
+- Product/service information
+- Common questions database
+- Custom responses
+- External knowledge base URL integration
+
+Advanced Settings:
+- Conversation timeout
+- Max conversation duration
+- Retry attempts
+- Fallback behavior
+- Escalation rules
+- Human handoff triggers
+
+VOICE LINKING:
+- Select voice from any channel
+- Preview voice with sample text
+- Test full conversation flow
+- Voice + AI compatibility check
+
+
+CALL LOGS PAGE
+-------------------------------------------------------------------------------
+Filters:
+- Date range picker
+- Caller ID search
+- Duration filter
+- Status (answered, missed, transferred)
+- AI confidence score range
+
+Call List View (table):
+Columns:
+- Timestamp
+- Caller ID
+- Duration
+- Status
+- AI Confidence
+- Actions (play, transcript, details)
+
+Call Detail View:
+- Full conversation transcript
+- Audio playback with transcript sync
+- Sentiment analysis
+- Key topics extracted
+- Action items identified
+- AI response accuracy
+- Voice quality metrics
+- Call rating/feedback
+
+Analytics Dashboard:
+- Calls per day (chart)
+- Average duration
+- Resolution rate
+- Top questions asked
+- AI accuracy over time
+- Voice quality trends
+- Caller satisfaction scores
+
+
+SETTINGS PAGE
+-------------------------------------------------------------------------------
+Account Settings:
+- Profile information
+- Email notifications
+- SMS alerts
+- Timezone
+- Language preferences
+
+Billing:
+- Current plan
+- Usage metrics
+- Invoices
+- Payment methods
+- Upgrade/downgrade options
+
+Integrations:
+- Webhook configuration
+- CRM integration (Salesforce, HubSpot)
+- Calendar sync
+- Email forwarding
+- Slack notifications
+- Custom API webhooks
+
+Advanced:
+- Audio codec preferences
+- Recording quality
+- Storage limits
+- Data retention policies
+- Export data
+- Delete account
+
+
+API KEYS MANAGEMENT PAGE
+-------------------------------------------------------------------------------
+Secure vault interface with:
+- OpenAI API Key (encrypted storage)
+- Anthropic API Key
+- Google AI API Key
+- Cohere API Key
+- ElevenLabs API Key
+- Resemble.AI API Key
+- Custom TTS/STT API Keys
+- SIP Provider Credentials
+
+Features per key:
+- Add/Edit/Delete
+- Test connection
+- Usage statistics
+- Last used timestamp
+- Rotation recommendations
+- Audit log of key usage
+
+
+TECHNICAL IMPLEMENTATION DETAILS
+===============================================================================
+
+DATABASE SCHEMA
+-------------------------------------------------------------------------------
+Users Table:
+- id, email, password_hash, name, created_at, updated_at
+- subscription_tier, api_quota, storage_quota
+
+SIP_Configurations Table:
+- id, user_id, provider_name, domain, port, username
+- auth_username, password_encrypted, transport, inbound_number
+- allowed_numbers (JSON), status, created_at, updated_at
+
+Voice_Profiles Table:
+- id, user_id, provider, voice_id, voice_name, audio_file_url
+- training_status, quality_score, created_at, updated_at
+
+AI_Configurations Table:
+- id, user_id, provider, model, api_key_encrypted
+- temperature, max_tokens, system_prompt, created_at
+
+Receptionist_Settings Table:
+- id, user_id, name, company, greeting, business_hours (JSON)
+- faq_data (JSON), routing_rules (JSON), created_at
+
+Call_Logs Table:
+- id, user_id, caller_id, duration, timestamp, status
+- transcript (text), recording_url, ai_confidence, sentiment
+- created_at
+
+API_Keys Table:
+- id, user_id, service_name, key_encrypted, last_used
+- usage_count, created_at, updated_at
+
+
+API ENDPOINTS
+-------------------------------------------------------------------------------
+Authentication:
+POST /api/auth/register
+POST /api/auth/login
+POST /api/auth/logout
+POST /api/auth/refresh
+
+SIP Configuration:
+GET /api/sip/config
+POST /api/sip/config
+PUT /api/sip/config/:id
+DELETE /api/sip/config/:id
+POST /api/sip/test-connection
+
+Voice Cloning:
+POST /api/voice/upload
+GET /api/voice/profiles
+POST /api/voice/train
+DELETE /api/voice/:id
+GET /api/voice/:id/preview
+
+AI Receptionist:
+GET /api/receptionist/config
+PUT /api/receptionist/config
+POST /api/receptionist/test
+GET /api/receptionist/models
+
+Call Management:
+POST /api/calls/inbound (webhook)
+GET /api/calls/logs
+GET /api/calls/:id
+GET /api/calls/:id/transcript
+GET /api/calls/:id/recording
+
+Analytics:
+GET /api/analytics/dashboard
+GET /api/analytics/calls
+GET /api/analytics/voice-quality
+
+
+WEBSOCKET EVENTS
+-------------------------------------------------------------------------------
+Client -> Server:
+- call.start
+- call.audio (streaming)
+- call.dtmf
+- call.end
+
+Server -> Client:
+- call.connected
+- call.transcription
+- call.ai_response
+- call.status_update
+- call.ended
+
+
+SIP INTEGRATION ARCHITECTURE
+-------------------------------------------------------------------------------
+Components:
+1. SIP User Agent (PJSIP library)
+2. WebRTC Gateway (mediasoup)
+3. Media Server (Janus/Kurento)
+4. RTP Proxy
+5. STUN/TURN servers
+
+Call Flow:
+1. Inbound SIP INVITE received
+2. Check caller ID against whitelist
+3. Establish RTP media stream
+4. Create WebRTC peer connection
+5. Bridge SIP <-> WebRTC
+6. Start STT on audio stream
+7. Feed transcription to AI
+8. Generate AI response
+9. TTS with cloned voice
+10. Stream back through RTP
+11. Handle call termination
+
+
+VOICE PROCESSING PIPELINE
+-------------------------------------------------------------------------------
+Inbound Audio:
+SIP/RTP -> Decoder (G.711/Opus) -> Audio Buffer -> 
+VAD (Voice Activity Detection) -> STT (Whisper/Google/Assembly) -> 
+Text Output
+
+Outbound Audio:
+AI Response Text -> TTS Engine (ElevenLabs/Resemble/Custom) -> 
+Audio Generation -> Encoder (G.711/Opus) -> RTP -> SIP
+
+Real-time Processing:
+- Buffer size: 20ms chunks
+- Sample rate: 16kHz or 8kHz
+- Encoding: PCM -> Codec
+- Latency target: <300ms end-to-end
+
+
+AI PROCESSING FLOW
+-------------------------------------------------------------------------------
+1. Receive transcribed text
+2. Maintain conversation context (last 10 messages)
+3. Add system prompt + user message
+4. Call selected AI provider API
+5. Parse AI response
+6. Extract action items (transfer, voicemail, etc.)
+7. Format response for TTS
+8. Queue audio generation
+9. Stream audio to caller
+10. Log conversation
+
+
+ERROR HANDLING & FALLBACKS
+-------------------------------------------------------------------------------
+SIP Connection Errors:
+- Auto-retry with exponential backoff
+- Switch to backup SIP server if configured
+- Alert user via email/SMS
+- Log error details
+
+Voice Cloning Failures:
+- Fallback to standard TTS voice
+- Queue retry for next call
+- Alert user to check API keys
+
+AI Provider Failures:
+- Fallback to secondary AI provider
+- Use pre-configured responses
+- Apologize to caller and transfer
+- Log error for review
+
+Audio Quality Issues:
+- Auto-adjust codec
+- Request lower bitrate
+- Enable noise suppression
+- Notify user of quality degradation
+
+
+MONITORING & ALERTS
+-------------------------------------------------------------------------------
+System Health Checks:
+- SIP registration status (every 30s)
+- API endpoint availability
+- Database connection
+- Media server status
+- Storage capacity
+
+Performance Metrics:
+- Call latency (STT + AI + TTS)
+- Voice quality (MOS score)
+- AI response accuracy
+- Concurrent call capacity
+- API rate limit usage
+
+Alerts (via email/SMS/Slack):
+- SIP disconnection
+- Failed API authentication
+- High error rate (>5%)
+- Storage >80% full
+- Unusual call volume
+- Security incidents
+
+
+SECURITY IMPLEMENTATION
+-------------------------------------------------------------------------------
+Authentication:
+- JWT tokens (access + refresh)
+- Password hashing (bcrypt)
+- 2FA optional
+- Session management
+- IP whitelisting option
+
+Encryption:
+- TLS 1.3 for all API calls
+- SRTP for media streams
+- AES-256 for stored credentials
+- Encrypted database fields
+
+Access Control:
+- Role-based permissions
+- API key scopes
+- Rate limiting per user
+- CORS configuration
+- Request validation
+
+
+DEPLOYMENT CONFIGURATION
+-------------------------------------------------------------------------------
+Docker Compose Structure:
+- web (Next.js frontend)
+- api (Node.js/FastAPI backend)
+- postgres (database)
+- redis (caching/sessions)
+- media-server (SIP/WebRTC)
+- worker (async jobs)
+- nginx (reverse proxy)
+
+Environment Variables:
+- DATABASE_URL
+- REDIS_URL
+- JWT_SECRET
+- OPENAI_API_KEY (server-side backup)
+- ELEVENLABS_API_KEY
+- RESEMBLE_API_KEY
+- SMTP_CONFIG
+- AWS_S3_CONFIG
+- SIP_SERVER_CONFIG
+
+Scaling Strategy:
+- Horizontal scaling for API servers
+- Dedicated media servers per region
+- Database read replicas
+- CDN for static assets
+- Load balancer (Round-robin)
+
+
+TESTING REQUIREMENTS
+-------------------------------------------------------------------------------
+Unit Tests:
+- SIP configuration validation
+- Audio codec conversion
+- AI response parsing
+- Voice quality metrics
+- User authentication
+
+Integration Tests:
+- End-to-end call flow
+- API provider integration
+- Database operations
+- File upload/storage
+- Webhook delivery
+
+Load Tests:
+- 100 concurrent calls
+- 1000 calls per hour
+- API rate limits
+- Database performance
+- Storage I/O
+
+User Acceptance Tests:
+- SIP setup wizard
+- Voice upload flow
+- Call reception
+- Transcript accuracy
+- UI responsiveness
+
+
+DOCUMENTATION STRUCTURE
+===============================================================================
+
+Quick Start Guide:
+1. Sign up and verify email
+2. Configure SIP provider
+3. Upload voice sample
+4. Set up AI receptionist
+5. Test call flow
+6. Go live
+
+SIP Provider Compatibility List:
+- Switchboard Free â
+- Twilio â
+- Vonage â
+- Telnyx â
+- Bandwidth â
+- Custom SIP servers â
+
+Voice Cloning Best Practices:
+- Use high-quality audio (WAV 44.1kHz)
+- Record in quiet environment
+- Speak naturally, avoid monotone
+- Provide varied sentence structures
+- Minimum 1 minute of audio
+- Avoid background music/noise
+
+AI Prompt Engineering Guide:
+- System prompt templates
+- Example conversations
+- Handling edge cases
+- Response formatting
+- Personality tuning
+- Knowledge base integration
+
+Troubleshooting Guide:
+- SIP connection issues
+- Audio quality problems
+- AI response delays
+- Voice training failures
+- Common error codes
+- Support contact info
+
+
+FINAL IMPLEMENTATION CHECKLIST
+===============================================================================
+
+Backend:
+â SIP client integration (PJSIP)
+â WebRTC gateway setup
+â Media server configuration
+â STT integration (all 3 providers)
+â TTS integration (all 3 providers)
+â AI provider integrations
+â Database schema & migrations
+â API endpoints (REST)
+â WebSocket server
+â Authentication system
+â File storage (S3)
+â Email notifications
+â Webhook system
+â Background job queue
+â Error logging
+â Performance monitoring
+
+Frontend:
+â Dashboard page
+â SIP configuration UI
+â Voice cloning interface (3 channels)
+â Clone receptionist configuration
+â Call logs & analytics
+â Settings page
+â API keys management
+â Responsive design
+â Loading states
+â Error handling
+â Form validation
+â Audio player components
+â Real-time call status
+
+DevOps:
+â Docker containerization
+â Docker Compose setup
+â CI/CD pipeline
+â Environment configs
+â SSL certificates
+â Backup automation
+â Monitoring setup
+â Logging aggregation
+â Auto-scaling rules
+
+Testing:
+â Unit test suite
+â Integration tests
+â Load testing
+â Security testing
+â UAT scenarios
+â Browser compatibility
+
+Documentation:
+â API documentation
+â User guide
+â Admin guide
+â Developer docs
+â Deployment guide
+â Troubleshooting
+
+
+BUILD THIS AS A COMPLETE, PRODUCTION-READY PLATFORM
+===============================================================================
+The final deliverable should give users full control over their AI voice 
+receptionist using ANY SIP provider and ANY AI/voice cloning service, with 
+Switchboard Free as the primary example configuration.
+
+Key Success Metrics:
+- <500ms call latency
+- 99.9% uptime
+- Support for 100+ concurrent calls
+- Seamless provider switching
+- Enterprise-grade security
+- Intuitive user interface
+- Comprehensive analytics
+- Full API access
+
+
+END OF PROMPT
+===============================================================================

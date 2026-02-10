@@ -1,0 +1,158 @@
+REPLIT DEPLOYMENT FIX - CRITICAL PRIORITY
+BUDGET LIMIT: DO NOT EXCEED $5 TOTAL
+STOP and ask for approval if cost approaches $3
+
+PRIMARY ISSUE: DOMAIN NOT REFLECTING CHANGES
+Problem: All recent changes visible on Replit preview and Expo, but NOT showing on www.cfgpt.com
+Required Solution: Make www.cfgpt.com show EXACTLY what appears in Replit preview
+
+WHAT MUST BE VISIBLE ON WWW.CFGPT.COM
+All these features MUST work on the live domain for ALL users:
+✅ Recent Features to Verify:
+
+Build Tabs - All build sections functional
+Earn Credits System - Users can see and earn credits
+PayPal Buttons:
+
+£10 monthly bundle
+£20 monthly bundle
+£5 voice cloning package
+
+
+AdMob Integration - Ads displaying correctly
+ElevenLabs Features:
+
+Voice cloning button (5 credits)
+AI Agent widget creator
+Widget dashboard
+Call timer & credit system
+
+
+Credit Balance Display - Users see their credits
+All User Account Features - Dashboard, settings, etc.
+
+
+DEPLOYMENT REQUIREMENTS
+Step 1: Identify Deployment Issue
+Check these common problems:
+
+Is deployment pointing to correct domain (www.cfgpt.com)?
+Are environment variables set in production?
+Is build process completing successfully?
+Are static files being served correctly?
+Is DNS/domain connection configured properly?
+Are there any build errors in deployment logs?
+
+Step 2: Fix Deployment Configuration
+Ensure:
+
+Custom domain (www.cfgpt.com) is properly linked
+Production build includes ALL recent code changes
+No caching issues preventing updates
+All API keys work in production environment
+Database is accessible from live domain
+
+Step 3: Verify ALL Features Work
+Test on www.cfgpt.com (not Replit preview):
+
+ Can users see PayPal buttons?
+ Can users purchase credits?
+ Does voice cloning work?
+ Do widgets display?
+ Are ads showing?
+ Is credit system functional?
+
+
+ADMIN DATABASE REQUIREMENT
+CRITICAL: Create accessible admin dashboard at www.cfgpt.com/admin
+Must display:
+
+All registered users in database table
+User download/signup data:
+
+Username/email
+Registration date
+Credit balance
+Subscription status (free/paid)
+Last login
+Features used
+
+
+Real-time user count
+Transaction history (PayPal purchases)
+
+Access: Secure admin login (provide credentials separately)
+
+CONTEXT: WEBSITE-FIRST STRATEGY
+Important Understanding:
+
+www.cfgpt.com is our MAIN PUBLIC WEBSITE right now
+We are NOT launching as app yet
+Next week: Testing phase before app conversion
+This week: Website must be fully functional for customers
+
+Therefore:
+
+All features must work on WEB BROWSER at www.cfgpt.com
+Customers will access via website not app
+Everything must be publicly accessible
+No app-specific code should block website functionality
+
+
+DEPLOYMENT CHECKLIST
+Before confirming completion, verify:
+LIVE DOMAIN TEST (www.cfgpt.com):
+□ Homepage loads correctly
+□ User registration works
+□ User login works
+□ PayPal buttons clickable and functional
+□ Credits display in user account
+□ Voice cloning button appears (paid users)
+□ Widget creation works
+□ AdMob ads display
+□ Admin dashboard accessible at /admin
+□ All users visible in admin database
+□ Mobile responsive (test on phone)
+□ No console errors in browser
+
+WHAT NOT TO DO
+❌ Don't rebuild entire project
+❌ Don't change code that already works in preview
+❌ Don't modify database structure unnecessarily
+❌ Don't create new branches or versions
+❌ Don't add new features - ONLY fix deployment
+❌ Don't exceed $5 budget
+
+REQUIRED OUTPUT
+Provide me with:
+
+Explanation of why domain wasn't updating
+List of changes made to fix deployment
+Confirmation all features now visible on www.cfgpt.com
+Admin login credentials for database access
+Total cost of these fixes
+
+Test Links:
+
+Live site: www.cfgpt.com
+Admin panel: www.cfgpt.com/admin
+Test user account functionality
+
+
+EMERGENCY ROLLBACK
+If deployment breaks existing functionality:
+
+STOP immediately
+Rollback to last working version
+Report what went wrong
+Wait for new instructions
+
+
+CONFIRM BEFORE STARTING:
+
+You understand www.cfgpt.com must show all recent changes
+You will NOT exceed $5 budget
+You will test on live domain before confirming completion
+You will provide admin dashboard access
+
+Respond with your deployment plan and estimated cost before proceeding.
